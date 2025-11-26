@@ -14,6 +14,7 @@ export default defineConfig({
 		emptyOutDir: true, // because outDir is outside our project root, force deletion
 		assetsDir: './assets',
 		sourcemap: false,
+		target: 'es2022', // Support top-level await
 		rollupOptions: {
 			input: glob.sync(
 				posix.join('src', '**/*.html'),
