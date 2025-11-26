@@ -166,17 +166,20 @@
     
     // Import MicroModal from CDN (works in browser without bundler)
     let MicroModal;
+    let microModalLoaded = false;
     try {
         const micromodalModule = await import('https://cdn.jsdelivr.net/npm/micromodal@0.4.10/dist/micromodal.es.js');
         MicroModal = micromodalModule.default || micromodalModule;
+        microModalLoaded = true;
         // console.log('MicroModal loaded successfully');
     } catch (error) {
         // console.error('Failed to load MicroModal:', error);
+        console.error('Failed to load MicroModal:', error);
         alert('Error loading modal library. Please refresh the page.');
         // Create a fallback object to prevent errors
         MicroModal = {
-            show: () => {/* console.error('MicroModal not loaded'); */},
-            init: () => {/* console.error('MicroModal not loaded'); */}
+            show: () => { console.error('MicroModal not loaded'); },
+            init: () => { console.error('MicroModal not loaded'); }
         };
     }
     
@@ -297,7 +300,12 @@
                     submitBtn.textContent = 'Continue';
                 }
                 
-                // Open modal using MicroModal
+                // Open modal using MicroModal (ensure it's loaded)
+                if (!microModalLoaded || !MicroModal || typeof MicroModal.show !== 'function') {
+                    console.error('MicroModal not available');
+                    alert('Modal library is not loaded. Please refresh the page.');
+                    return;
+                }
                 MicroModal.show('signupModal', {
                     openTrigger: 'data-mm-target',
                     closeTrigger: 'data-mm-dismiss',
@@ -321,7 +329,7 @@
                             const testBtn = document.getElementById('signupSubmit');
                             // console.log('After modal open - Form exists:', !!testForm, 'Button exists:', !!testBtn);
                             
-                            // Initialize form handler
+                            // Initialize form handler (will skip if already initialized)
                             initFormHandler();
                             
                             // Ensure button is still reset after handler initialization
@@ -329,7 +337,7 @@
                                 testBtn.disabled = false;
                                 testBtn.textContent = 'Continue';
                             }
-                        }, 300);
+                        }, 100);
                     },
                     onClose: () => {
                         document.body.classList.remove('overflow-hidden');
@@ -451,6 +459,7 @@
     }
 
     // Form submission handler - wait for form to exist
+    let formHandlerInitialized = false;
     function initFormHandler() {
         const form = document.getElementById('signupForm');
         const submitBtn = document.getElementById('signupSubmit');
@@ -460,6 +469,12 @@
             setTimeout(initFormHandler, 100);
             return;
         }
+
+        // Prevent duplicate initialization
+        if (formHandlerInitialized) {
+            return;
+        }
+        formHandlerInitialized = true;
 
         // console.log('Form handler initialized successfully');
         // console.log('Form element:', form);
@@ -652,8 +667,7 @@
                 // Small delay to ensure button state updates, then open in new tab
                 setTimeout(() => {
                     // console.log('Opening in new tab:', redirectUrl);
-                    // window.open(redirectUrl, '_blank');
-                    window.location.href = redirectUrl;
+                    window.open(redirectUrl, '_blank');
                     
                     // Close the modal after opening the new tab
                     setTimeout(() => {
