@@ -1,0 +1,717 @@
+<!-- Membership Pricing Section -->
+<style>
+    .membership-card {
+        background-color: #E7EBFF;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+    }
+    .membership-card:hover {
+        background-color: #D1D9FF;
+    }
+    .signup-button {
+        background-color: #8C9EFF;
+        transition: background-color 0.3s ease;
+    }
+    .signup-button:hover {
+        background-color: #7A8EFF;
+    }
+</style>
+<div class="w-full mx-auto md:w-10/12 lg:w-9/12 lg:text-lg" id="membership-pricing">
+    <!-- Header -->
+    <div class="text-center mb-8 md:mb-12">
+        <p class="text-medium lg:text-lg mb-3 text-blue font-semibold">Become a member</p>
+        <h2 class="text-8xl lg:text-10xl mb-4 font-bold capitalize text-center tracking-tighter">Book, repair, drive.</h2>
+    </div>
+
+    <!-- Assure Platinum Section -->
+    <div class="membership-card mb-8 md:mb-12">
+        <div class="flex flex-col lg:flex-row gap-6 lg:gap-8" style="align-items: center;">
+            <!-- Left Side - Title and Description -->
+            <div class="lg:w-1/2">
+                <h3 class="text-5xl lg:text-8xl font-bold text-blue mb-4">Assure Platinum $0 repair fee*</h3>
+                <p class="flex items-start text-base lg:text-lg text-black mb-0">
+                    <icon src="check-blue.svg" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></icon>
+                    All the good things included with gold minus the $50 call out fee*
+                </p>
+            </div>
+            
+            <!-- Right Side - Pricing Cards -->
+            <div class="lg:w-1/2 flex flex-col gap-4">
+                <!-- Annual Membership Card -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <p class="text-base lg:text-lg mb-3 font-semibold">Annual Membership</p>
+                    <div class="flex items-baseline gap-2 mb-2">
+                        <span class="text-5xl lg:text-6xl font-bold text-blue">$529</span>
+                        <span class="text-lg text-gray-400 line-through">$588</span>
+                    </div>
+                    <p class="text-sm lg:text-base text-green-600 font-semibold mb-2">SAVE 10%</p>
+                    <p class="text-sm lg:text-base text-gray-600 mb-4">Equal to $44.08 p/m</p>
+                    <a href="#" data-mm-target="signupModal" data-productId="32" class="signup-button w-full text-center px-4 py-3 rounded-lg font-semibold text-white transition duration-300 block">
+                        Sign-up
+                    </a>
+                </div>
+                
+                <!-- Monthly Membership Card -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <p class="text-base lg:text-lg mb-3 font-semibold">Pay Monthly – $49 p/m</p>
+                    <p class="text-sm lg:text-base text-gray-600 mb-4">12 Month minimum – $588 total.</p>
+                    <a href="#" data-mm-target="signupModal" data-productId="33" class="signup-button w-full text-center px-4 py-3 rounded-lg font-semibold text-white transition duration-300 block">
+                        Sign-up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assure Gold Section -->
+    <div class="membership-card">
+        <div class="flex flex-col lg:flex-row gap-6 lg:gap-8" style="align-items: center;">
+            <!-- Left Side - Title and Description -->
+            <div class="lg:w-1/2">
+                <h3 class="text-5xl lg:text-8xl font-bold text-blue mb-4">Assure Gold $50 call out fee*</h3>
+                <p class="flex items-start text-base lg:text-lg text-black mb-0">
+                    <icon src="check-blue.svg" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></icon>
+                    All the good things included with gold minus the $50 call out fee*
+                </p>
+            </div>
+            
+            <!-- Right Side - Pricing Cards -->
+            <div class="lg:w-1/2 flex flex-col gap-4">
+                <!-- Annual Membership Card -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <p class="text-base lg:text-lg mb-3 font-semibold">Annual Membership</p>
+                    <div class="flex items-baseline gap-2 mb-2">
+                        <span class="text-5xl lg:text-6xl font-bold text-blue">$378</span>
+                        <span class="text-lg text-gray-400 line-through">$420</span>
+                    </div>
+                    <p class="text-sm lg:text-base text-green-600 font-semibold mb-2">SAVE 10%</p>
+                    <p class="text-sm lg:text-base text-gray-600 mb-4">Equal to $31.50 p/m</p>
+                    <a href="#" data-mm-target="signupModal" data-productId="34" class="signup-button w-full text-center px-4 py-3 rounded-lg font-semibold text-white transition duration-300 block">
+                        Sign-up
+                    </a>
+                </div>
+                
+                <!-- Monthly Membership Card -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <p class="text-base lg:text-lg mb-3 font-semibold">Pay Monthly – $35 p/m</p>
+                    <p class="text-sm lg:text-base text-gray-600 mb-4">12 Month minimum – $420 total.</p>
+                    <a href="#" data-mm-target="signupModal" data-productId="35" class="signup-button w-full text-center px-4 py-3 rounded-lg font-semibold text-white transition duration-300 block">
+                        Sign-up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Signup Modal -->
+<div class="fixed z-[999] h-screen w-full left-0 top-0 opacity-0 pointer-events-none overflow-auto bg-black/80 hidden transition-opacity duration-300 group/modal group-[.ready]/body:block [&.is-open]:opacity-100 [&.is-open]:pointer-events-auto" id="signupModal" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
+    <div tabindex="-1" data-mm-dismiss class="w-full h-full">
+        <div role="dialog" aria-modal="true" aria-labelledby="signupModal-title" class="h-full px-4 py-8 lg:py-10 flex justify-center items-center">
+            <div id="signupModal-content" class="m-auto w-full text-center max-w-xl bg-white translate-y-8 transition-transform duration-300 px-5 pt-10 pb-6 md:px-10 md:py-10 motion-reduce:transition-none group-[.is-open]/modal:translate-y-0 rounded-lg" onclick="event.stopPropagation();">
+                <span data-mm-dismiss class="block text-black absolute top-4 right-4 md:top-5 md:right-5 cursor-pointer w-4">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto pointer-events-none">
+                        <path d="M16.7071 1.70711C17.0976 1.31658 17.0976 0.683417 16.7071 0.292893C16.3166 -0.0976311 15.6834 -0.0976311 15.2929 0.292893L16.7071 1.70711ZM0.292893 15.2929C-0.0976311 15.6834 -0.0976311 16.3166 0.292893 16.7071C0.683417 17.0976 1.31658 17.0976 1.70711 16.7071L0.292893 15.2929ZM1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM15.2929 16.7071C15.6834 17.0976 16.3166 17.0976 16.7071 16.7071C17.0976 16.3166 17.0976 15.6834 16.7071 15.2929L15.2929 16.7071ZM15.2929 0.292893L0.292893 15.2929L1.70711 16.7071L16.7071 1.70711L15.2929 0.292893ZM0.292893 1.70711L15.2929 16.7071L16.7071 15.2929L1.70711 0.292893L0.292893 1.70711Z" fill="black" />
+                    </svg>
+                </span>
+                <div class="lg:text-xl">
+                    <h3 id="signupModal-title" class="text-2xl lg:text-3xl font-bold leading-tight mb-5">
+                        Sign Up
+                    </h3>
+                    <p id="selectedProductInfo" class="text-sm text-gray-600 mb-4 hidden"></p>
+                    <form id="signupForm" class="text-left" action="#" method="post">
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="signup-email">Email <span class="text-red-500">*</span></label>
+                            <input type="email" id="signup-email" name="email" class="text-base appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue" placeholder="Enter your email" required>
+                            <span class="error-message text-red-500 text-sm hidden"></span>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="signup-phone">Mobile Number <span class="text-red-500">*</span></label>
+                            <input type="tel" id="signup-phone" name="phone" class="text-base appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue" placeholder="" required>
+                            <span class="error-message text-red-500 text-sm hidden"></span>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="signup-firstname">First Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="signup-firstname" name="firstName" class="text-base appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue" placeholder="Enter your first name" required>
+                            <span class="error-message text-red-500 text-sm hidden"></span>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="signup-lastname">Last Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="signup-lastname" name="lastName" class="text-base appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue" placeholder="Enter your last name" required>
+                            <span class="error-message text-red-500 text-sm hidden"></span>
+                        </div>
+                        <div class="mb-6">
+                            <label class="flex items-start">
+                                <input type="checkbox" id="signup-terms" name="terms" class="mt-1 mr-2" required>
+                                <span class="text-sm text-gray-700">I agree to Assure Scratch and Dent <a href="/terms-and-conditions.pdf" target="_blank" class="text-blue underline">terms and conditions</a> <span class="text-red-500">*</span></span>
+                            </label>
+                            <span class="error-message text-red-500 text-sm hidden"></span>
+                        </div>
+                        <button type="submit" id="signupSubmit" class="signup-button w-full text-center px-4 py-3 rounded-lg font-semibold text-white transition duration-300">
+                            Continue
+                        </button>
+                        <div id="signupFormMessages" class="form-messages mt-5 text-sm [&.error]:text-red-500 [&.success]:text-green-600 hidden"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module">
+    import { getRRP, DEALER_ID, CAMPAIGN_NAME } from '../assets/js/membership-config.js';
+    
+    // Import MicroModal from CDN (works in browser without bundler)
+    let MicroModal;
+    try {
+        const micromodalModule = await import('https://cdn.jsdelivr.net/npm/micromodal@0.4.10/dist/micromodal.es.js');
+        MicroModal = micromodalModule.default || micromodalModule;
+        // console.log('MicroModal loaded successfully');
+    } catch (error) {
+        // console.error('Failed to load MicroModal:', error);
+        alert('Error loading modal library. Please refresh the page.');
+        // Create a fallback object to prevent errors
+        MicroModal = {
+            show: () => {/* console.error('MicroModal not loaded'); */},
+            init: () => {/* console.error('MicroModal not loaded'); */}
+        };
+    }
+    
+    // Log that imports are loaded
+
+    // Get Facebook Pixel data from cookies
+    function getFacebookPixel() {
+        try {
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+                return null;
+            }
+            
+            // Get Facebook Browser ID (_fbp) - used for browser-based tracking
+            const fbp = getCookie('_fbp');
+            // Get Facebook Click ID (_fbc) - used for click-based tracking from ads
+            const fbc = getCookie('_fbc');
+            
+            
+            // Prefer _fbc if available (more specific for ad clicks), otherwise use _fbp
+            const pixelValue = fbc || fbp;
+            if (!pixelValue) {
+                // console.warn('No Facebook pixel cookie found, using default');
+            }
+            return pixelValue ? encodeURIComponent(pixelValue) : 'xxxxx';
+        } catch (error) {
+            // console.error('Error getting Facebook pixel:', error);
+            return 'xxxxx';
+        }
+    }
+
+    // Store selected product ID
+    let selectedProductId = null;
+
+    // Detect country based on domain
+    function getCountryFromDomain() {
+        const hostname = window.location.hostname.toLowerCase();
+        if (hostname.includes('.com.au')) return 'AU';
+        if (hostname.includes('.sg')) return 'SG';
+        if (hostname.includes('.co.nz')) return 'NZ';
+        if (hostname.includes('.in')) return 'IN';
+        if (hostname.includes('.com')) return 'USA';
+        // Default to USA if not detected
+        return 'USA';
+    }
+
+    // Get country-specific phone placeholder
+    function getPhonePlaceholder() {
+        const country = getCountryFromDomain();
+        switch (country) {
+            case 'AU':
+                return '04XX XXX XXX';
+            case 'USA':
+                return '(XXX) XXX-XXXX';
+            case 'SG':
+                return '8XXXXXXX';
+            case 'NZ':
+                return '02X XXX XXXX';
+            case 'IN':
+                return '9XXXXXXXXX';
+            default:
+                return 'Enter your mobile number';
+        }
+    }
+
+    // Wait for DOM to be ready
+    function initSignupModal() {
+        // Set phone placeholder based on country
+        const phoneInput = document.getElementById('signup-phone');
+        if (phoneInput) {
+            phoneInput.placeholder = getPhonePlaceholder();
+        }
+        
+        // Handle signup button clicks
+        document.querySelectorAll('[data-mm-target="signupModal"]').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                selectedProductId = button.getAttribute('data-productId');
+                
+                // Debug: Log selected product ID
+                // console.log('Selected Product ID:', selectedProductId);
+                
+                // Show product info in modal
+                const productInfo = document.getElementById('selectedProductInfo');
+                if (productInfo) {
+                    const productNames = {
+                        '32': 'Assure Platinum - Annual Membership',
+                        '33': 'Assure Platinum - Pay Monthly',
+                        '34': 'Assure Gold - Annual Membership',
+                        '35': 'Assure Gold - Pay Monthly'
+                    };
+                    productInfo.textContent = `Signing up for: ${productNames[selectedProductId] || 'Product ' + selectedProductId}`;
+                    productInfo.classList.remove('hidden');
+                }
+                
+                // Reset form when opening modal
+                const form = document.getElementById('signupForm');
+                if (form) {
+                    form.reset();
+                    form.querySelectorAll('.error-message').forEach(el => el.classList.add('hidden'));
+                    form.querySelectorAll('input').forEach(input => input.classList.remove('border-red-500'));
+                    const messageDiv = document.getElementById('signupFormMessages');
+                    if (messageDiv) messageDiv.classList.add('hidden');
+                    
+                    // Update phone placeholder
+                    const phoneField = document.getElementById('signup-phone');
+                    if (phoneField) {
+                        phoneField.placeholder = getPhonePlaceholder();
+                    }
+                }
+                
+                // Reset submit button state
+                const submitBtn = document.getElementById('signupSubmit');
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Continue';
+                }
+                
+                // Open modal using MicroModal
+                MicroModal.show('signupModal', {
+                    openTrigger: 'data-mm-target',
+                    closeTrigger: 'data-mm-dismiss',
+                    openClass: 'is-open',
+                    onShow: () => {
+                        document.body.classList.add('overflow-hidden');
+                        
+                        // Reset submit button state when modal opens
+                        const submitBtn = document.getElementById('signupSubmit');
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Continue';
+                        }
+                        
+                        // Ensure form handler is initialized when modal opens
+                        setTimeout(() => {
+                            // console.log('Modal opened, initializing form handler...');
+                            
+                            // Test if form and button exist
+                            const testForm = document.getElementById('signupForm');
+                            const testBtn = document.getElementById('signupSubmit');
+                            // console.log('After modal open - Form exists:', !!testForm, 'Button exists:', !!testBtn);
+                            
+                            // Initialize form handler
+                            initFormHandler();
+                            
+                            // Ensure button is still reset after handler initialization
+                            if (testBtn) {
+                                testBtn.disabled = false;
+                                testBtn.textContent = 'Continue';
+                            }
+                        }, 300);
+                    },
+                    onClose: () => {
+                        document.body.classList.remove('overflow-hidden');
+                    }
+                });
+            });
+        });
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSignupModal);
+    } else {
+        initSignupModal();
+    }
+
+    // Validation functions
+    function validateEmail(email) {
+        const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        return re.test(email);
+    }
+
+    function validatePhone(phone) {
+        if (!phone || phone.trim() === '') {
+            return false;
+        }
+        
+        const country = getCountryFromDomain();
+        // Remove spaces, dashes, parentheses, and plus signs for validation (we'll handle country codes separately)
+        let cleaned = phone.replace(/[\s\-\(\)]/g, '');
+        
+        switch (country) {
+            case 'AU':
+                // Australian mobile: 04XX XXX XXX (10 digits starting with 04)
+                // Can also have +61 prefix
+                if (cleaned.startsWith('+61')) {
+                    cleaned = '0' + cleaned.substring(3);
+                } else if (cleaned.startsWith('61') && cleaned.length === 11) {
+                    cleaned = '0' + cleaned.substring(2);
+                }
+                return /^04\d{8}$/.test(cleaned);
+                
+            case 'USA':
+                // US phone: exactly 10 digits, can have +1 prefix
+                if (cleaned.startsWith('+1')) {
+                    cleaned = cleaned.substring(2);
+                } else if (cleaned.startsWith('1') && cleaned.length === 11) {
+                    cleaned = cleaned.substring(1);
+                }
+                // Must be exactly 10 digits, first digit cannot be 0 or 1
+                return /^[2-9]\d{9}$/.test(cleaned) && cleaned.length === 10;
+                
+            case 'SG':
+                // Singapore mobile: 8 digits starting with 6, 8, or 9
+                // Can have +65 prefix
+                if (cleaned.startsWith('+65')) {
+                    cleaned = cleaned.substring(3);
+                } else if (cleaned.startsWith('65') && cleaned.length === 10) {
+                    cleaned = cleaned.substring(2);
+                }
+                return /^[689]\d{7}$/.test(cleaned);
+                
+            case 'NZ':
+                // New Zealand mobile: 8-9 digits, typically starting with 02
+                // Can have +64 prefix
+                if (cleaned.startsWith('+64')) {
+                    cleaned = cleaned.substring(3);
+                } else if (cleaned.startsWith('64') && cleaned.length >= 10) {
+                    cleaned = cleaned.substring(2);
+                }
+                return /^0\d{7,8}$/.test(cleaned) || /^[2-9]\d{7,8}$/.test(cleaned);
+                
+            case 'IN':
+                // Indian mobile: 10 digits starting with 6-9
+                // Can have +91 prefix
+                if (cleaned.startsWith('+91')) {
+                    cleaned = cleaned.substring(3);
+                } else if (cleaned.startsWith('91') && cleaned.length === 12) {
+                    cleaned = cleaned.substring(2);
+                }
+                return /^[6-9]\d{9}$/.test(cleaned);
+                
+            default:
+                return cleaned.length >= 8 && cleaned.length <= 15;
+        }
+    }
+
+    function validateName(name) {
+        return name && name.trim().length >= 2;
+    }
+
+    // Error display functions
+    function showFieldError(field, message) {
+        if (!field) return;
+        field.classList.add('border-red-500');
+        const errorSpan = field.nextElementSibling;
+        if (errorSpan && errorSpan.classList.contains('error-message')) {
+            errorSpan.textContent = message;
+            errorSpan.classList.remove('hidden');
+        }
+    }
+
+    function clearFieldError(field) {
+        if (!field) return;
+        field.classList.remove('border-red-500');
+        const errorSpan = field.nextElementSibling;
+        if (errorSpan && errorSpan.classList.contains('error-message')) {
+            errorSpan.classList.add('hidden');
+        }
+    }
+
+    function showFormMessage(message, type) {
+        const messageDiv = document.getElementById('signupFormMessages');
+        if (messageDiv) {
+            messageDiv.textContent = message;
+            messageDiv.className = `form-messages mt-5 text-sm ${type === 'error' ? 'text-red-500' : 'text-green-600'} ${type}`;
+            messageDiv.classList.remove('hidden');
+        }
+    }
+
+    // Form submission handler - wait for form to exist
+    function initFormHandler() {
+        const form = document.getElementById('signupForm');
+        const submitBtn = document.getElementById('signupSubmit');
+        
+        if (!form || !submitBtn) {
+            // console.log('Form or button not found, retrying...', { form: !!form, submitBtn: !!submitBtn });
+            setTimeout(initFormHandler, 100);
+            return;
+        }
+
+        // console.log('Form handler initialized successfully');
+        // console.log('Form element:', form);
+        // console.log('Submit button element:', submitBtn);
+
+        // Function to handle form submission
+        function handleFormSubmit(e) {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+            }
+            
+            try {
+                // console.log('=== FORM SUBMIT HANDLER CALLED ===');
+                
+                // console.log('Form submitted. Selected Product ID:', selectedProductId);
+                
+                // Check if product ID is set
+                if (!selectedProductId) {
+                    const errorMsg = 'Error: No product selected. Please close and try again.';
+                    // console.error('No product ID selected!');
+                    alert(errorMsg);
+                    showFormMessage(errorMsg, 'error');
+                    return false;
+                }
+                
+                const email = document.getElementById('signup-email').value.trim();
+                const phone = document.getElementById('signup-phone').value.trim();
+                const firstName = document.getElementById('signup-firstname').value.trim();
+                const lastName = document.getElementById('signup-lastname').value.trim();
+                const terms = document.getElementById('signup-terms').checked;
+
+                // console.log('Form values:', { email, phone, firstName, lastName, terms });
+
+                // Clear previous errors
+                form.querySelectorAll('.error-message').forEach(el => el.classList.add('hidden'));
+                form.querySelectorAll('input').forEach(input => input.classList.remove('border-red-500'));
+
+                let isValid = true;
+
+                // Validate email
+                if (!email) {
+                    showFieldError(document.getElementById('signup-email'), 'Email is required');
+                    isValid = false;
+                } else if (!validateEmail(email)) {
+                    showFieldError(document.getElementById('signup-email'), 'Please enter a valid email address');
+                    isValid = false;
+                }
+
+                // Validate phone
+                const country = getCountryFromDomain();
+                let phoneErrorMessage = 'Please enter a valid mobile number';
+                
+                // Country-specific error messages
+                switch (country) {
+                    case 'AU':
+                        phoneErrorMessage = 'Please enter a valid Australian mobile number (e.g., 04XX XXX XXX)';
+                        break;
+                    case 'USA':
+                        phoneErrorMessage = 'Please enter a valid US phone number (e.g., (XXX) XXX-XXXX)';
+                        break;
+                    case 'SG':
+                        phoneErrorMessage = 'Please enter a valid Singapore mobile number (8 digits starting with 6, 8, or 9)';
+                        break;
+                    case 'NZ':
+                        phoneErrorMessage = 'Please enter a valid New Zealand mobile number (8-9 digits)';
+                        break;
+                    case 'IN':
+                        phoneErrorMessage = 'Please enter a valid Indian mobile number (10 digits starting with 6-9)';
+                        break;
+                }
+                
+                if (!phone) {
+                    showFieldError(document.getElementById('signup-phone'), 'Mobile number is required');
+                    isValid = false;
+                } else if (!validatePhone(phone)) {
+                    showFieldError(document.getElementById('signup-phone'), phoneErrorMessage);
+                    isValid = false;
+                }
+
+                // Validate first name
+                if (!firstName) {
+                    showFieldError(document.getElementById('signup-firstname'), 'First name is required');
+                    isValid = false;
+                } else if (!validateName(firstName)) {
+                    showFieldError(document.getElementById('signup-firstname'), 'First name must be at least 2 characters');
+                    isValid = false;
+                }
+
+                // Validate last name
+                if (!lastName) {
+                    showFieldError(document.getElementById('signup-lastname'), 'Last name is required');
+                    isValid = false;
+                } else if (!validateName(lastName)) {
+                    showFieldError(document.getElementById('signup-lastname'), 'Last name must be at least 2 characters');
+                    isValid = false;
+                }
+
+                // Validate terms
+                if (!terms) {
+                    const termsCheckbox = document.getElementById('signup-terms');
+                    const errorSpan = termsCheckbox.closest('label').nextElementSibling;
+                    if (errorSpan && errorSpan.classList.contains('error-message')) {
+                        errorSpan.textContent = 'You must agree to the terms and conditions';
+                        errorSpan.classList.remove('hidden');
+                    }
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    showFormMessage('Please correct the errors above', 'error');
+                    return false;
+                }
+
+                // Get product RRP
+                // console.log('Getting RRP for product ID:', selectedProductId);
+                let rrp;
+                try {
+                    if (typeof getRRP !== 'function') {
+                        throw new Error('getRRP function not available');
+                    }
+                    rrp = getRRP(parseInt(selectedProductId));
+                    // console.log('RRP retrieved:', rrp);
+                } catch (error) {
+                    // console.error('Error getting RRP:', error);
+                    alert('Error getting product price. Product ID: ' + selectedProductId);
+                    rrp = null;
+                }
+                
+                if (!rrp) {
+                    const errorMsg = 'Invalid product selected. Please try again. Product ID: ' + selectedProductId;
+                    // console.error('Invalid RRP for product ID:', selectedProductId);
+                    alert(errorMsg);
+                    showFormMessage(errorMsg, 'error');
+                    return false;
+                }
+
+                // Get Facebook pixel
+                let pixel;
+                try {
+                    pixel = getFacebookPixel();
+                    // console.log('Facebook pixel retrieved:', pixel);
+                    if (!pixel || pixel === 'xxxxx') {
+                        // console.warn('Facebook pixel not found, using default value');
+                    }
+                } catch (error) {
+                    // console.error('Error getting Facebook pixel:', error);
+                    pixel = 'xxxxx';
+                }
+
+                // Get dealer ID and campaign
+                const dealerId = DEALER_ID || 533;
+                const campaign = CAMPAIGN_NAME || 'joinassure';
+                
+                // console.log('Building URL with:', {
+                //     email, firstName, lastName, phone,
+                //     productId: selectedProductId,
+                //     rrp, dealerId, campaign, pixel
+                // });
+
+                // Build URL
+                const params = new URLSearchParams({
+                    email: email,
+                    firstName: firstName,
+                    lastName: lastName,
+                    phone: phone,
+                    productId: selectedProductId,
+                    rrp: rrp,
+                    iddealer: dealerId,
+                    campaign: campaign,
+                    pixel: pixel
+                });
+
+                const redirectUrl = `http://my.assurescratchanddent.com/signup?${params.toString()}`;
+
+                // Disable submit button
+                const btn = document.getElementById('signupSubmit');
+                if (btn) {
+                    btn.disabled = true;
+                    btn.textContent = 'Processing...';
+                }
+
+                // Log for debugging
+                // console.log('=== REDIRECT URL GENERATED ===');
+                // console.log('Full URL:', redirectUrl);
+                // console.log('Product ID in URL:', selectedProductId);
+                // alert('Redirecting to: ' + redirectUrl);
+
+                // Small delay to ensure button state updates, then open in new tab
+                setTimeout(() => {
+                    // console.log('Opening in new tab:', redirectUrl);
+                    // window.open(redirectUrl, '_blank');
+                    window.location.href = redirectUrl;
+                    
+                    // Close the modal after opening the new tab
+                    setTimeout(() => {
+                        if (MicroModal && typeof MicroModal.close === 'function') {
+                            MicroModal.close('signupModal');
+                        }
+                    }, 500);
+                }, 150);
+                
+                return false; // Prevent default form submission
+            } catch (error) {
+                // console.error('Error in form submission:', error);
+                alert('An error occurred: ' + error.message);
+                showFormMessage('An error occurred. Please try again.', 'error');
+                return false;
+            }
+        }
+
+        // Attach handler to form submit event
+        form.addEventListener('submit', handleFormSubmit, false);
+        // console.log('Form submit listener attached');
+        
+        // ALSO attach handler directly to button click as fallback
+        submitBtn.addEventListener('click', function(e) {
+            // console.log('=== BUTTON CLICKED DIRECTLY ===');
+            e.preventDefault();
+            e.stopPropagation();
+            handleFormSubmit(e);
+        }, false);
+        // console.log('Button click listener attached');
+    }
+
+    // Initialize form handler when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFormHandler);
+    } else {
+        initFormHandler();
+    }
+
+    // Clear errors on input - wait for form to exist
+    function initInputHandlers() {
+        const form = document.getElementById('signupForm');
+        if (!form) {
+            setTimeout(initInputHandlers, 100);
+            return;
+        }
+
+        form.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', () => {
+                clearFieldError(input);
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initInputHandlers);
+    } else {
+        initInputHandlers();
+    }
+</script>
+

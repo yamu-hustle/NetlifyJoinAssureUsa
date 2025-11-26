@@ -1,0 +1,39 @@
+<header
+	class="site-header fixed top-0 left-0 w-full py-4 bg-transparent z-[99] transition duration-300"
+>
+	<div class="container px-4">
+		<div class="flex justify-between items-center w-full">
+			<div class="">
+				<if condition="page === 'offer'">
+					<a href="#top" class="w-[130px] lg:w-[202px] block">
+						<span class="sr-only">Logo</span>
+						<img src="logo.png" class="w-full" />
+					</a>
+				</if>
+				<else>
+					<a href="#top" class="w-[130px] lg:w-[202px] block">
+						<span class="sr-only">Logo</span>
+						<img src="logo.png" />
+					</a>
+				</else>
+			</div>
+			<a
+				href="mailto:sales@assurescratchanddent.com"
+				class="flex items-center"
+				title="phone"
+			>
+				<div class="md:mr-3">
+					<img class="w-10" src="icon-email.png" />
+				</div>
+				<div
+					class="hidden flex-col text-xl leading-tight lg:flex phone-text text-dark"
+				>
+					<span class="block text-base">Any Questions?</span>
+					<em class="not-italic font-bold tracking-tighter"
+						>sales@assurescratchanddent.com</em
+					>
+				</div>
+			</a>
+		</div>
+	</div>
+</header>
