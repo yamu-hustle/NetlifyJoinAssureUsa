@@ -4,10 +4,10 @@
  */
 export const PRODUCT_CONFIG = {
     // Product ID: RRP
-    32: 476,  // Assure Platinum Annual
-    33: 44,   // Assure Platinum Monthly
-    34: 367,  // Assure Gold Annual
-    35: 34,   // Assure Gold Monthly
+    32: 529,  // Assure Platinum Annual
+    33: 49,   // Assure Platinum Monthly
+    34: 378,  // Assure Gold Annual
+    35: 35,   // Assure Gold Monthly
 };
 
 // Dealer ID - can be changed if necessary

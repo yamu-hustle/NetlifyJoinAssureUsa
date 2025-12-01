@@ -49,16 +49,16 @@
                     </div>
                     <p class="text-sm lg:text-base text-green-600 font-semibold mb-2">SAVE 10%</p>
                     <p class="text-sm lg:text-base text-gray-600 mb-4">Equal to $44.08 p/m</p>
-                    <a data-productId="32" data-mm-target="signupModal" class="signup-button inline-block w-full text-center px-4 py-3 rounded-lg font-semibold text-white cursor-pointer">
+                    <a href="#" data-mm-target="signupModal" data-productId="32" class="signup-button w-full text-center px-4 py-3 rounded-lg font-semibold text-white transition duration-300 block">
                         Sign-up
                     </a>
                 </div>
                 
-                <!-- Pay Monthly Card -->
+                <!-- Monthly Membership Card -->
                 <div class="bg-white rounded-xl p-6 shadow-lg">
-                    <p class="text-base lg:text-lg mb-3 font-semibold">Pay Monthly – $45 p/m</p>
-                    <p class="text-sm lg:text-base text-gray-600 mb-4">12 Month minimum – $540 total.</p>
-                    <a data-productId="33" data-mm-target="signupModal" class="signup-button inline-block w-full text-center px-4 py-3 rounded-lg font-semibold text-white cursor-pointer">
+                    <p class="text-base lg:text-lg mb-3 font-semibold">Pay Monthly – $49 p/m</p>
+                    <p class="text-sm lg:text-base text-gray-600 mb-4">12 Month minimum – $588 total.</p>
+                    <a href="#" data-mm-target="signupModal" data-productId="33" class="signup-button w-full text-center px-4 py-3 rounded-lg font-semibold text-white transition duration-300 block">
                         Sign-up
                     </a>
                 </div>
@@ -67,11 +67,15 @@
     </div>
 
     <!-- Assure Gold Section -->
-    <div class="membership-card mb-8 md:mb-12">
+    <div class="membership-card">
         <div class="flex flex-col lg:flex-row gap-6 lg:gap-8" style="align-items: center;">
-            <!-- Left Side - Title -->
+            <!-- Left Side - Title and Description -->
             <div class="lg:w-1/2">
-                <h3 class="text-5xl lg:text-8xl font-bold text-blue mb-4">Assure Gold $50 repair fee*</h3>
+                <h3 class="text-5xl lg:text-8xl font-bold text-blue mb-4">Assure Gold $50 call out fee*</h3>
+                <p class="flex items-start text-base lg:text-lg text-black mb-0">
+                    <icon src="check-blue.svg" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></icon>
+                    All the good things included with gold minus the $50 call out fee*
+                </p>
             </div>
             
             <!-- Right Side - Pricing Cards -->
@@ -85,16 +89,16 @@
                     </div>
                     <p class="text-sm lg:text-base text-green-600 font-semibold mb-2">SAVE 10%</p>
                     <p class="text-sm lg:text-base text-gray-600 mb-4">Equal to $31.50 p/m</p>
-                    <a data-productId="34" data-mm-target="signupModal" class="signup-button inline-block w-full text-center px-4 py-3 rounded-lg font-semibold text-white cursor-pointer">
+                    <a href="#" data-mm-target="signupModal" data-productId="34" class="signup-button w-full text-center px-4 py-3 rounded-lg font-semibold text-white transition duration-300 block">
                         Sign-up
                     </a>
                 </div>
                 
-                <!-- Pay Monthly Card -->
+                <!-- Monthly Membership Card -->
                 <div class="bg-white rounded-xl p-6 shadow-lg">
                     <p class="text-base lg:text-lg mb-3 font-semibold">Pay Monthly – $35 p/m</p>
                     <p class="text-sm lg:text-base text-gray-600 mb-4">12 Month minimum – $420 total.</p>
-                    <a data-productId="35" data-mm-target="signupModal" class="signup-button inline-block w-full text-center px-4 py-3 rounded-lg font-semibold text-white cursor-pointer">
+                    <a href="#" data-mm-target="signupModal" data-productId="35" class="signup-button w-full text-center px-4 py-3 rounded-lg font-semibold text-white transition duration-300 block">
                         Sign-up
                     </a>
                 </div>
@@ -107,7 +111,7 @@
 <div class="fixed z-[999] h-screen w-full left-0 top-0 opacity-0 pointer-events-none overflow-auto bg-black/80 hidden transition-opacity duration-300 group/modal group-[.ready]/body:block [&.is-open]:opacity-100 [&.is-open]:pointer-events-auto" id="signupModal" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
     <div tabindex="-1" data-mm-dismiss class="w-full h-full">
         <div role="dialog" aria-modal="true" aria-labelledby="signupModal-title" class="h-full px-4 py-8 lg:py-10 flex justify-center items-center">
-            <div id="signupModal-content" class="m-auto w-full text-center max-w-xl bg-white translate-y-8 transition-transform duration-300 px-5 pt-10 pb-6 md:px-10 md:py-10 motion-reduce:transition-none group-[.is-open]/modal:translate-y-0 rounded-lg" onclick="event.stopPropagation();" onsubmit="return false;">
+            <div id="signupModal-content" class="m-auto w-full text-center max-w-xl bg-white translate-y-8 transition-transform duration-300 px-5 pt-10 pb-6 md:px-10 md:py-10 motion-reduce:transition-none group-[.is-open]/modal:translate-y-0 rounded-lg" onclick="event.stopPropagation();">
                 <span data-mm-dismiss class="block text-black absolute top-4 right-4 md:top-5 md:right-5 cursor-pointer w-4">
                     <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto pointer-events-none">
                         <path d="M16.7071 1.70711C17.0976 1.31658 17.0976 0.683417 16.7071 0.292893C16.3166 -0.0976311 15.6834 -0.0976311 15.2929 0.292893L16.7071 1.70711ZM0.292893 15.2929C-0.0976311 15.6834 -0.0976311 16.3166 0.292893 16.7071C0.683417 17.0976 1.31658 17.0976 1.70711 16.7071L0.292893 15.2929ZM1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM15.2929 16.7071C15.6834 17.0976 16.3166 17.0976 16.7071 16.7071C17.0976 16.3166 17.0976 15.6834 16.7071 15.2929L15.2929 16.7071ZM15.2929 0.292893L0.292893 15.2929L1.70711 16.7071L16.7071 1.70711L15.2929 0.292893ZM0.292893 1.70711L15.2929 16.7071L16.7071 15.2929L1.70711 0.292893L0.292893 1.70711Z" fill="black" />
@@ -146,8 +150,7 @@
                             </label>
                             <span class="error-message text-red-500 text-sm hidden"></span>
                         </div>
-
-                        <button type="button" id="signupSubmit" class="signup-button w-full text-center px-4 py-3 rounded-lg font-semibold text-white transition duration-300">
+                        <button type="submit" id="signupSubmit" class="signup-button w-full text-center px-4 py-3 rounded-lg font-semibold text-white transition duration-300">
                             Continue
                         </button>
                         <div id="signupFormMessages" class="form-messages mt-5 text-sm [&.error]:text-red-500 [&.success]:text-green-600 hidden"></div>
@@ -159,104 +162,7 @@
 </div>
 
 <script type="module">
-    // IMMEDIATE LOG - Script is loading
-    console.log('🚀 MEMBERSHIP PRICING SCRIPT LOADING...');
-    console.log('Script location:', window.location.href);
-    console.log('Current pathname:', window.location.pathname);
-    
-    // Import path - use relative path from component
-    // In dev: resolves from src/components/ to src/assets/js/
-    // In production: Vite should process and resolve this during build
-    let configModule = null;
-    let getRRP, DEALER_ID, CAMPAIGN_NAME;
-    
-    try {
-        configModule = await import('../assets/js/membership-config.js');
-        // Keep reference to the module to ensure closures work correctly
-        window.__membershipConfig = configModule;
-        
-        // Always use module reference directly to avoid closure issues
-        // Create a wrapper that always calls through the module
-        getRRP = (productId) => {
-            return configModule.getRRP(productId);
-        };
-        
-        DEALER_ID = configModule.DEALER_ID;
-        CAMPAIGN_NAME = configModule.CAMPAIGN_NAME;
-        
-        console.log('✅ Imports loaded successfully via dynamic import');
-        console.log('DEALER_ID:', DEALER_ID);
-        console.log('CAMPAIGN_NAME:', CAMPAIGN_NAME);
-        console.log('getRRP type:', typeof getRRP);
-        console.log('PRODUCT_CONFIG available:', !!configModule.PRODUCT_CONFIG);
-        
-        if (configModule.PRODUCT_CONFIG) {
-            console.log('PRODUCT_CONFIG contents:', configModule.PRODUCT_CONFIG);
-            console.log('PRODUCT_CONFIG[32]:', configModule.PRODUCT_CONFIG[32]);
-            console.log('PRODUCT_CONFIG keys:', Object.keys(configModule.PRODUCT_CONFIG));
-            // Test the function
-            const testResult = getRRP(32);
-            console.log('Test getRRP(32):', testResult);
-            if (testResult !== 529) {
-                console.error('❌ getRRP test failed! Expected 529, got:', testResult);
-            } else {
-                console.log('✅ getRRP test passed!');
-            }
-        }
-    } catch (importError) {
-        console.error('❌ CRITICAL: Failed to import membership-config.js');
-        console.error('Import error:', importError);
-        console.error('Error message:', importError.message);
-        console.error('Error stack:', importError.stack);
-        
-        // Try alternative path as fallback
-        try {
-            console.log('🔄 Trying alternative import path...');
-            const configModule = await import('/assets/js/membership-config.js');
-            getRRP = configModule.getRRP;
-            DEALER_ID = configModule.DEALER_ID;
-            CAMPAIGN_NAME = configModule.CAMPAIGN_NAME;
-            console.log('✅ Imports loaded successfully via fallback path');
-        } catch (fallbackError) {
-            console.error('❌ Fallback import also failed:', fallbackError);
-            // Set defaults to prevent complete failure
-            // Use hardcoded values as last resort
-            const FALLBACK_CONFIG = {
-                32: 529,  // Assure Platinum Annual
-                33: 49,   // Assure Platinum Monthly
-                34: 378,  // Assure Gold Annual
-                35: 35,   // Assure Gold Monthly
-            };
-            getRRP = (productId) => FALLBACK_CONFIG[productId] || null;
-            DEALER_ID = 7;
-            CAMPAIGN_NAME = 'joinassure';
-            console.warn('⚠️ Using fallback hardcoded values - form will work but config import failed');
-        }
-    }
-    
-    // ============================================
-    // DEBUG FLAG - Set to false to disable all debugging logs
-    // ============================================
-    const DEBUG = true; // Change to true to enable debugging
-    
-    // Debug logging helper function
-    const debugLog = (...args) => {
-        if (DEBUG) {
-            console.log(...args);
-        }
-    };
-    
-    const debugWarn = (...args) => {
-        if (DEBUG) {
-            console.warn(...args);
-        }
-    };
-    
-    const debugError = (...args) => {
-        if (DEBUG) {
-            console.error(...args);
-        }
-    };
+    import { getRRP, DEALER_ID, CAMPAIGN_NAME } from '../assets/js/membership-config.js';
     
     // Import MicroModal from CDN (works in browser without bundler)
     let MicroModal;
@@ -278,7 +184,6 @@
     }
     
     // Log that imports are loaded
-    debugLog('Imports loaded:', { DEALER_ID, CAMPAIGN_NAME, getRRP: typeof getRRP, MicroModal: typeof MicroModal });
 
     // Get Facebook Pixel data from cookies
     function getFacebookPixel() {
@@ -295,7 +200,6 @@
             // Get Facebook Click ID (_fbc) - used for click-based tracking from ads
             const fbc = getCookie('_fbc');
             
-            debugLog('Facebook cookies:', { fbp, fbc });
             
             // Prefer _fbc if available (more specific for ad clicks), otherwise use _fbp
             const pixelValue = fbc || fbp;
@@ -320,8 +224,8 @@
         if (hostname.includes('.co.nz')) return 'NZ';
         if (hostname.includes('.in')) return 'IN';
         if (hostname.includes('.com')) return 'USA';
-        // Default to AU if not detected
-        return 'AU';
+        // Default to USA if not detected
+        return 'USA';
     }
 
     // Get country-specific phone placeholder
@@ -418,24 +322,15 @@
                         
                         // Ensure form handler is initialized when modal opens
                         setTimeout(() => {
-                            debugLog('=== MODAL OPENED - CHECKING FORM ELEMENTS ===');
+                            // console.log('Modal opened, initializing form handler...');
                             
                             // Test if form and button exist
                             const testForm = document.getElementById('signupForm');
                             const testBtn = document.getElementById('signupSubmit');
-                            debugLog('After modal open - Form exists:', !!testForm);
-                            debugLog('After modal open - Button exists:', !!testBtn);
-                            debugLog('Form handler initialized flag:', formHandlerInitialized);
+                            // console.log('After modal open - Form exists:', !!testForm, 'Button exists:', !!testBtn);
                             
-                            if (testForm && testBtn) {
-                                debugLog('✅ Form elements found in modal, ensuring handler is initialized');
                             // Initialize form handler (will skip if already initialized)
                             initFormHandler();
-                            } else {
-                                debugError('❌ Form elements NOT found in modal!');
-                                debugError('Form:', testForm);
-                                debugError('Button:', testBtn);
-                            }
                             
                             // Ensure button is still reset after handler initialization
                             if (testBtn) {
@@ -474,26 +369,18 @@
         // Remove spaces, dashes, parentheses, and plus signs for validation (we'll handle country codes separately)
         let cleaned = phone.replace(/[\s\-\(\)]/g, '');
         
-        // Check if it contains only digits and allowed characters
-        if (!/^[\d+]+$/.test(cleaned)) {
-            return false;
-        }
-        
         switch (country) {
-            case 'AU': // Australia
-                // Australian mobile: must start with 04 and be 10 digits total
-                // Can have +61 or 0 prefix
+            case 'AU':
+                // Australian mobile: 04XX XXX XXX (10 digits starting with 04)
+                // Can also have +61 prefix
                 if (cleaned.startsWith('+61')) {
-                    cleaned = cleaned.substring(3);
-                } else if (cleaned.startsWith('61')) {
-                    cleaned = cleaned.substring(2);
-                } else if (cleaned.startsWith('0')) {
-                    cleaned = cleaned.substring(1);
+                    cleaned = '0' + cleaned.substring(3);
+                } else if (cleaned.startsWith('61') && cleaned.length === 11) {
+                    cleaned = '0' + cleaned.substring(2);
                 }
-                // Mobile numbers must start with 4 and be 9 digits (after removing country code)
-                return /^4\d{8}$/.test(cleaned) && cleaned.length === 9;
+                return /^04\d{8}$/.test(cleaned);
                 
-            case 'USA': // United States
+            case 'USA':
                 // US phone: exactly 10 digits, can have +1 prefix
                 if (cleaned.startsWith('+1')) {
                     cleaned = cleaned.substring(2);
@@ -503,73 +390,70 @@
                 // Must be exactly 10 digits, first digit cannot be 0 or 1
                 return /^[2-9]\d{9}$/.test(cleaned) && cleaned.length === 10;
                 
-            case 'SG': // Singapore
+            case 'SG':
                 // Singapore mobile: 8 digits starting with 6, 8, or 9
+                // Can have +65 prefix
                 if (cleaned.startsWith('+65')) {
                     cleaned = cleaned.substring(3);
-                } else if (cleaned.startsWith('65')) {
+                } else if (cleaned.startsWith('65') && cleaned.length === 10) {
                     cleaned = cleaned.substring(2);
                 }
-                // Must be exactly 8 digits starting with 6, 8, or 9
-                return /^[689]\d{7}$/.test(cleaned) && cleaned.length === 8;
+                return /^[689]\d{7}$/.test(cleaned);
                 
-            case 'NZ': // New Zealand
-                // New Zealand mobile: 8-9 digits, mobile starts with 2
+            case 'NZ':
+                // New Zealand mobile: 8-9 digits, typically starting with 02
+                // Can have +64 prefix
                 if (cleaned.startsWith('+64')) {
                     cleaned = cleaned.substring(3);
-                } else if (cleaned.startsWith('64')) {
+                } else if (cleaned.startsWith('64') && cleaned.length >= 10) {
                     cleaned = cleaned.substring(2);
-                } else if (cleaned.startsWith('0')) {
-                    cleaned = cleaned.substring(1);
                 }
-                // Mobile numbers start with 2 and are 8-9 digits
-                return /^2\d{7,8}$/.test(cleaned) && (cleaned.length === 8 || cleaned.length === 9);
+                return /^0\d{7,8}$/.test(cleaned) || /^[2-9]\d{7,8}$/.test(cleaned);
                 
-            case 'IN': // India
-                // Indian mobile: 10 digits starting with 6, 7, 8, or 9
+            case 'IN':
+                // Indian mobile: 10 digits starting with 6-9
+                // Can have +91 prefix
                 if (cleaned.startsWith('+91')) {
                     cleaned = cleaned.substring(3);
-                } else if (cleaned.startsWith('91')) {
+                } else if (cleaned.startsWith('91') && cleaned.length === 12) {
                     cleaned = cleaned.substring(2);
-                } else if (cleaned.startsWith('0')) {
-                    cleaned = cleaned.substring(1);
                 }
-                // Must be exactly 10 digits starting with 6-9
-                return /^[6-9]\d{9}$/.test(cleaned) && cleaned.length === 10;
+                return /^[6-9]\d{9}$/.test(cleaned);
                 
             default:
-                // Fallback: at least 8 digits
-                const digitsOnly = cleaned.replace(/\D/g, '');
-                return digitsOnly.length >= 8 && digitsOnly.length <= 15;
+                return cleaned.length >= 8 && cleaned.length <= 15;
         }
     }
 
     function validateName(name) {
-        return name.trim().length >= 2;
+        return name && name.trim().length >= 2;
     }
 
+    // Error display functions
     function showFieldError(field, message) {
-        const errorSpan = field.parentElement.querySelector('.error-message');
-        if (errorSpan) {
+        if (!field) return;
+        field.classList.add('border-red-500');
+        const errorSpan = field.nextElementSibling;
+        if (errorSpan && errorSpan.classList.contains('error-message')) {
             errorSpan.textContent = message;
             errorSpan.classList.remove('hidden');
         }
-        field.classList.add('border-red-500');
     }
 
     function clearFieldError(field) {
-        const errorSpan = field.parentElement.querySelector('.error-message');
-        if (errorSpan) {
+        if (!field) return;
+        field.classList.remove('border-red-500');
+        const errorSpan = field.nextElementSibling;
+        if (errorSpan && errorSpan.classList.contains('error-message')) {
             errorSpan.classList.add('hidden');
         }
-        field.classList.remove('border-red-500');
     }
 
     function showFormMessage(message, type) {
         const messageDiv = document.getElementById('signupFormMessages');
         if (messageDiv) {
             messageDiv.textContent = message;
-            messageDiv.className = `form-messages mt-5 text-sm ${type === 'error' ? 'text-red-500' : 'text-green-600'} hidden`;
+            messageDiv.className = `form-messages mt-5 text-sm ${type === 'error' ? 'text-red-500' : 'text-green-600'} ${type}`;
             messageDiv.classList.remove('hidden');
         }
     }
@@ -577,164 +461,68 @@
     // Form submission handler - wait for form to exist
     let formHandlerInitialized = false;
     function initFormHandler() {
-        // IMMEDIATE LOG - Always show initialization attempts
-        console.log('🔧 INIT FORM HANDLER CALLED - Document ready:', document.readyState);
-        
-        debugLog('=== INIT FORM HANDLER CALLED ===');
-        debugLog('Document ready state:', document.readyState);
-        debugLog('Current time:', new Date().toISOString());
-        
         const form = document.getElementById('signupForm');
         const submitBtn = document.getElementById('signupSubmit');
         
-        // IMMEDIATE LOG - Always show if elements are found
-        console.log('🔍 Looking for form elements:', {
-            formFound: !!form,
-            buttonFound: !!submitBtn,
-            formId: form ? form.id : 'NOT FOUND',
-            buttonId: submitBtn ? submitBtn.id : 'NOT FOUND'
-        });
-        
-        debugLog('Form element found:', !!form, form);
-        debugLog('Submit button found:', !!submitBtn, submitBtn);
-        
         if (!form || !submitBtn) {
-            // IMMEDIATE LOG - Always show retry attempts
-            console.warn('⚠️ Form or button not found, retrying in 100ms...', { 
-                form: !!form, 
-                submitBtn: !!submitBtn,
-                formId: form ? form.id : 'not found',
-                buttonId: submitBtn ? submitBtn.id : 'not found'
-            });
-            debugWarn('⚠️ Form or button not found, retrying in 100ms...', { 
-                form: !!form, 
-                submitBtn: !!submitBtn,
-                formId: form ? form.id : 'not found',
-                buttonId: submitBtn ? submitBtn.id : 'not found'
-            });
+            // console.log('Form or button not found, retrying...', { form: !!form, submitBtn: !!submitBtn });
             setTimeout(initFormHandler, 100);
             return;
         }
 
-        // IMMEDIATE LOG - Elements found
-        console.log('✅ Form and button found! Initializing handlers...');
-
         // Prevent duplicate initialization
         if (formHandlerInitialized) {
-            debugLog('⚠️ Form handler already initialized, skipping...');
             return;
         }
         formHandlerInitialized = true;
 
-        debugLog('✅ Form handler initialized successfully');
-        debugLog('Form element:', form);
-        debugLog('Form ID:', form.id);
-        debugLog('Submit button element:', submitBtn);
-        debugLog('Submit button ID:', submitBtn.id);
-        debugLog('Submit button type:', submitBtn.type);
-        debugLog('Submit button disabled:', submitBtn.disabled);
+        // console.log('Form handler initialized successfully');
+        // console.log('Form element:', form);
+        // console.log('Submit button element:', submitBtn);
 
         // Function to handle form submission
         function handleFormSubmit(e) {
-            // IMMEDIATE LOG - Always show when handler is called
-            console.log('🎯🎯🎯 FORM SUBMIT HANDLER CALLED 🎯🎯🎯');
-            console.log('Event type:', e ? e.type : 'no event');
-            console.log('Timestamp:', new Date().toISOString());
-            
-            debugLog('=== FORM SUBMIT HANDLER CALLED ===');
-            debugLog('Event:', e);
-            debugLog('Event type:', e ? e.type : 'no event');
-            
-            // Always prevent default and stop propagation
             if (e) {
                 e.preventDefault();
                 e.stopPropagation();
                 e.stopImmediatePropagation();
-                console.log('✅ Event prevented and stopped');
-                debugLog('Event prevented and stopped');
             }
             
             try {
-                debugLog('=== STARTING FORM SUBMISSION ===');
-                debugLog('Selected Product ID:', selectedProductId);
-                debugLog('DEALER_ID:', DEALER_ID);
-                debugLog('CAMPAIGN_NAME:', CAMPAIGN_NAME);
-                debugLog('getRRP function available:', typeof getRRP);
-                debugLog('MicroModal available:', typeof MicroModal);
+                // console.log('=== FORM SUBMIT HANDLER CALLED ===');
+                
+                // console.log('Form submitted. Selected Product ID:', selectedProductId);
                 
                 // Check if product ID is set
                 if (!selectedProductId) {
                     const errorMsg = 'Error: No product selected. Please close and try again.';
-                    debugError('❌ No product ID selected!');
+                    // console.error('No product ID selected!');
                     alert(errorMsg);
                     showFormMessage(errorMsg, 'error');
                     return false;
                 }
-                debugLog('✅ Product ID check passed:', selectedProductId);
                 
-            debugLog('=== COLLECTING FORM VALUES ===');
-            const emailEl = document.getElementById('signup-email');
-            const phoneEl = document.getElementById('signup-phone');
-            const firstNameEl = document.getElementById('signup-firstname');
-            const lastNameEl = document.getElementById('signup-lastname');
-            const termsEl = document.getElementById('signup-terms');
-            
-            debugLog('Form elements found:', {
-                email: !!emailEl,
-                phone: !!phoneEl,
-                firstName: !!firstNameEl,
-                lastName: !!lastNameEl,
-                terms: !!termsEl
-            });
+                const email = document.getElementById('signup-email').value.trim();
+                const phone = document.getElementById('signup-phone').value.trim();
+                const firstName = document.getElementById('signup-firstname').value.trim();
+                const lastName = document.getElementById('signup-lastname').value.trim();
+                const terms = document.getElementById('signup-terms').checked;
 
-            const email = emailEl ? emailEl.value.trim() : '';
-            const phone = phoneEl ? phoneEl.value.trim() : '';
-            const firstName = firstNameEl ? firstNameEl.value.trim() : '';
-            const lastName = lastNameEl ? lastNameEl.value.trim() : '';
-            const terms = termsEl ? termsEl.checked : false;
-
-            debugLog('Form values collected:', { 
-                email: email ? email.substring(0, 3) + '***' : 'empty',
-                phone: phone ? phone.substring(0, 3) + '***' : 'empty',
-                firstName: firstName || 'empty',
-                lastName: lastName || 'empty',
-                terms: terms
-            });
+                // console.log('Form values:', { email, phone, firstName, lastName, terms });
 
                 // Clear previous errors
                 form.querySelectorAll('.error-message').forEach(el => el.classList.add('hidden'));
                 form.querySelectorAll('input').forEach(input => input.classList.remove('border-red-500'));
 
-            // First, check HTML5 native validation (required fields, email format, etc.)
-            console.log('🔍 Checking HTML5 form validation...');
-            debugLog('=== CHECKING HTML5 VALIDATION ===');
-            
-            if (!form.checkValidity()) {
-                // HTML5 validation failed - show browser's native validation messages
-                console.warn('⚠️ HTML5 validation failed, showing native validation messages');
-                debugWarn('⚠️ HTML5 validation failed');
-                form.reportValidity(); // This shows the browser's native validation messages
-                return false;
-            }
-            
-            console.log('✅ HTML5 validation passed, proceeding with custom validation');
-            debugLog('✅ HTML5 validation passed');
-
                 let isValid = true;
-            debugLog('=== STARTING CUSTOM VALIDATION ===');
 
                 // Validate email
-            debugLog('Validating email...');
                 if (!email) {
-                debugLog('❌ Email validation failed: empty');
                     showFieldError(document.getElementById('signup-email'), 'Email is required');
                     isValid = false;
                 } else if (!validateEmail(email)) {
-                debugLog('❌ Email validation failed: invalid format');
                     showFieldError(document.getElementById('signup-email'), 'Please enter a valid email address');
                     isValid = false;
-            } else {
-                debugLog('✅ Email validation passed');
                 }
 
                 // Validate phone
@@ -760,51 +548,34 @@
                         break;
                 }
                 
-            debugLog('Validating phone...');
                 if (!phone) {
-                debugLog('❌ Phone validation failed: empty');
                     showFieldError(document.getElementById('signup-phone'), 'Mobile number is required');
                     isValid = false;
                 } else if (!validatePhone(phone)) {
-                debugLog('❌ Phone validation failed: invalid format');
                     showFieldError(document.getElementById('signup-phone'), phoneErrorMessage);
                     isValid = false;
-            } else {
-                debugLog('✅ Phone validation passed');
                 }
 
                 // Validate first name
-            debugLog('Validating first name...');
                 if (!firstName) {
-                debugLog('❌ First name validation failed: empty');
                     showFieldError(document.getElementById('signup-firstname'), 'First name is required');
                     isValid = false;
                 } else if (!validateName(firstName)) {
-                debugLog('❌ First name validation failed: too short');
                     showFieldError(document.getElementById('signup-firstname'), 'First name must be at least 2 characters');
                     isValid = false;
-            } else {
-                debugLog('✅ First name validation passed');
                 }
 
                 // Validate last name
-            debugLog('Validating last name...');
                 if (!lastName) {
-                debugLog('❌ Last name validation failed: empty');
                     showFieldError(document.getElementById('signup-lastname'), 'Last name is required');
                     isValid = false;
                 } else if (!validateName(lastName)) {
-                debugLog('❌ Last name validation failed: too short');
                     showFieldError(document.getElementById('signup-lastname'), 'Last name must be at least 2 characters');
                     isValid = false;
-            } else {
-                debugLog('✅ Last name validation passed');
                 }
 
                 // Validate terms
-            debugLog('Validating terms checkbox...');
                 if (!terms) {
-                debugLog('❌ Terms validation failed: not checked');
                     const termsCheckbox = document.getElementById('signup-terms');
                     const errorSpan = termsCheckbox.closest('label').nextElementSibling;
                     if (errorSpan && errorSpan.classList.contains('error-message')) {
@@ -812,107 +583,60 @@
                         errorSpan.classList.remove('hidden');
                     }
                     isValid = false;
-            } else {
-                debugLog('✅ Terms validation passed');
                 }
 
-            debugLog('=== VALIDATION COMPLETE ===');
-            debugLog('Form is valid:', isValid);
-            
                 if (!isValid) {
-                debugError('❌ Form validation failed, stopping submission');
                     showFormMessage('Please correct the errors above', 'error');
                     return false;
                 }
 
-            debugLog('✅ All validations passed, proceeding with submission');
-
                 // Get product RRP
-                console.log('=== GETTING PRODUCT RRP ===');
-                console.log('Product ID (raw):', selectedProductId);
-                console.log('Product ID type:', typeof selectedProductId);
-                const productIdNum = parseInt(selectedProductId);
-                console.log('Product ID (parsed):', productIdNum);
-                console.log('Product ID (parsed) type:', typeof productIdNum);
-                console.log('getRRP function type:', typeof getRRP);
-                console.log('getRRP function:', getRRP);
-                
-                debugLog('=== GETTING PRODUCT RRP ===');
-                debugLog('Product ID:', selectedProductId);
-                debugLog('getRRP function type:', typeof getRRP);
+                // console.log('Getting RRP for product ID:', selectedProductId);
                 let rrp;
                 try {
                     if (typeof getRRP !== 'function') {
                         throw new Error('getRRP function not available');
                     }
-                    console.log('Calling getRRP with:', productIdNum);
-                    // Direct test - check if we can access PRODUCT_CONFIG
-                    console.log('Testing direct lookup - checking if 32 exists in config...');
-                    rrp = getRRP(productIdNum);
-                    console.log('getRRP returned:', rrp);
-                    console.log('RRP type:', typeof rrp);
-                    
-                    // If null, try to debug why
-                    if (rrp === null) {
-                        console.warn('⚠️ getRRP returned null for product ID:', productIdNum);
-                        console.warn('This means the product ID is not in PRODUCT_CONFIG');
-                        console.warn('Expected: 486 for product ID 32');
-                        // Try calling the function directly to see what happens
-                        console.log('Function toString:', getRRP.toString());
-                    }
-                    debugLog('✅ RRP retrieved:', rrp);
+                    rrp = getRRP(parseInt(selectedProductId));
+                    // console.log('RRP retrieved:', rrp);
                 } catch (error) {
-                    debugError('❌ Error getting RRP:', error);
-                    debugError('Error stack:', error.stack);
+                    // console.error('Error getting RRP:', error);
                     alert('Error getting product price. Product ID: ' + selectedProductId);
                     rrp = null;
                 }
                 
                 if (!rrp) {
                     const errorMsg = 'Invalid product selected. Please try again. Product ID: ' + selectedProductId;
-                    debugError('❌ Invalid RRP for product ID:', selectedProductId);
+                    // console.error('Invalid RRP for product ID:', selectedProductId);
                     alert(errorMsg);
                     showFormMessage(errorMsg, 'error');
                     return false;
                 }
-                debugLog('✅ RRP check passed:', rrp);
 
                 // Get Facebook pixel
-                debugLog('=== GETTING FACEBOOK PIXEL ===');
                 let pixel;
                 try {
                     pixel = getFacebookPixel();
-                    debugLog('Facebook pixel retrieved:', pixel ? pixel.substring(0, 20) + '...' : 'empty');
+                    // console.log('Facebook pixel retrieved:', pixel);
                     if (!pixel || pixel === 'xxxxx') {
-                        debugWarn('⚠️ Facebook pixel not found, using default value');
+                        // console.warn('Facebook pixel not found, using default value');
                     }
                 } catch (error) {
-                    debugError('❌ Error getting Facebook pixel:', error);
+                    // console.error('Error getting Facebook pixel:', error);
                     pixel = 'xxxxx';
                 }
 
                 // Get dealer ID and campaign
-                debugLog('=== GETTING DEALER/CAMPAIGN INFO ===');
                 const dealerId = DEALER_ID || 533;
                 const campaign = CAMPAIGN_NAME || 'joinassure';
-                debugLog('Dealer ID:', dealerId);
-                debugLog('Campaign:', campaign);
                 
-                debugLog('=== BUILDING URL PARAMETERS ===');
-                debugLog('URL data:', {
-                    email: email ? email.substring(0, 3) + '***' : 'empty',
-                    firstName: firstName || 'empty',
-                    lastName: lastName || 'empty',
-                    phone: phone ? phone.substring(0, 3) + '***' : 'empty',
-                    productId: selectedProductId,
-                    rrp: rrp,
-                    iddealer: dealerId,
-                    campaign: campaign,
-                    pixel: pixel ? pixel.substring(0, 10) + '...' : 'empty'
-                });
+                // console.log('Building URL with:', {
+                //     email, firstName, lastName, phone,
+                //     productId: selectedProductId,
+                //     rrp, dealerId, campaign, pixel
+                // });
 
                 // Build URL
-                debugLog('Building URLSearchParams...');
                 const params = new URLSearchParams({
                     email: email,
                     firstName: firstName,
@@ -924,182 +648,64 @@
                     campaign: campaign,
                     pixel: pixel
                 });
-                debugLog('✅ URLSearchParams created:', params.toString());
 
-                const redirectUrl = `https://my.assurescratchanddent.com/signup?${params.toString()}`;
-                debugLog('=== REDIRECT URL GENERATED ===');
-                debugLog('Full URL:', redirectUrl);
-                debugLog('URL length:', redirectUrl.length);
+                const redirectUrl = `http://my.assurescratchanddent.com/signup?${params.toString()}`;
 
                 // Disable submit button
-                debugLog('=== DISABLING SUBMIT BUTTON ===');
                 const btn = document.getElementById('signupSubmit');
                 if (btn) {
                     btn.disabled = true;
                     btn.textContent = 'Processing...';
-                    debugLog('✅ Submit button disabled');
-                } else {
-                    debugWarn('⚠️ Submit button not found!');
                 }
 
+                // Log for debugging
+                // console.log('=== REDIRECT URL GENERATED ===');
+                // console.log('Full URL:', redirectUrl);
+                // console.log('Product ID in URL:', selectedProductId);
+                // alert('Redirecting to: ' + redirectUrl);
+
                 // Small delay to ensure button state updates, then open in new tab
-                debugLog('=== SETTING TIMEOUT FOR REDIRECT ===');
                 setTimeout(() => {
-                    debugLog('=== TIMEOUT FIRED - ATTEMPTING REDIRECT ===');
-                    debugLog('Redirect URL:', redirectUrl);
-                    debugLog('Window object:', typeof window);
-                    debugLog('window.open available:', typeof window.open);
+                    // console.log('Opening in new tab:', redirectUrl);
+                    window.open(redirectUrl, '_blank');
                     
-                    try {
-                        const newWindow = window.open(redirectUrl, '_blank');
-                        debugLog('window.open() called, returned:', newWindow);
-                        debugLog('newWindow type:', typeof newWindow);
-                        debugLog('newWindow closed:', newWindow ? newWindow.closed : 'N/A');
-                        
-                        // Check if popup was blocked
-                        if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
-                            // Popup was blocked, fall back to same-window navigation
-                            debugWarn('⚠️ Popup blocked, redirecting in same window');
-                            debugLog('Using window.location.href:', redirectUrl);
-                            window.location.href = redirectUrl;
-                            debugLog('✅ window.location.href set');
-                        } else {
-                            // Popup opened successfully, close the modal
-                            debugLog('✅ Redirect opened successfully in new tab');
+                    // Close the modal after opening the new tab
                     setTimeout(() => {
-                                debugLog('=== CLOSING MODAL ===');
                         if (MicroModal && typeof MicroModal.close === 'function') {
-                                    debugLog('Closing modal with MicroModal.close()');
                             MicroModal.close('signupModal');
-                                    debugLog('✅ Modal close called');
-                                } else {
-                                    debugWarn('⚠️ MicroModal not available or close function missing');
                         }
                     }, 500);
-                        }
-                    } catch (redirectError) {
-                        debugError('❌ Error during redirect:', redirectError);
-                        debugError('Error stack:', redirectError.stack);
-                        alert('Error redirecting: ' + redirectError.message);
-                    }
                 }, 150);
                 
-                debugLog('=== FORM HANDLER COMPLETED SUCCESSFULLY ===');
                 return false; // Prevent default form submission
             } catch (error) {
-                debugError('❌❌❌ CRITICAL ERROR IN FORM SUBMISSION ❌❌❌');
-                debugError('Error message:', error.message);
-                debugError('Error stack:', error.stack);
-                debugError('Error name:', error.name);
-                debugError('Full error object:', error);
+                // console.error('Error in form submission:', error);
                 alert('An error occurred: ' + error.message);
                 showFormMessage('An error occurred. Please try again.', 'error');
                 return false;
             }
         }
 
-        // Attach handler to form submit event (with capture to catch early)
-        debugLog('=== ATTACHING EVENT LISTENERS ===');
-        debugLog('Form element:', form);
-        debugLog('Submit button element:', submitBtn);
+        // Attach handler to form submit event
+        form.addEventListener('submit', handleFormSubmit, false);
+        // console.log('Form submit listener attached');
         
-        // Prevent form submission - attach with capture phase to run first
-        form.addEventListener('submit', function(e) {
-            // IMMEDIATE LOG - Always show form submit
-            console.log('🔵 FORM SUBMIT EVENT TRIGGERED');
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-            debugLog('🔵 FORM SUBMIT EVENT TRIGGERED');
-            handleFormSubmit(e);
-            return false;
-        }, true); // Use capture phase to run before other handlers
-        
-        debugLog('✅ Form submit listener attached (with capture)');
-        
-        // Attach handler directly to button click (primary handler)
+        // ALSO attach handler directly to button click as fallback
         submitBtn.addEventListener('click', function(e) {
-            // IMMEDIATE LOG - Always show button clicks
-            console.log('🔵🔵🔵 BUTTON CLICKED DIRECTLY 🔵🔵🔵');
-            console.log('Click event type:', e.type);
-            console.log('Button element:', submitBtn);
-            console.log('Button disabled:', submitBtn.disabled);
-            console.log('Button type:', submitBtn.type);
-            
-            debugLog('🔵🔵🔵 BUTTON CLICKED DIRECTLY 🔵🔵🔵');
-            debugLog('Click event:', e);
-            debugLog('Button element:', submitBtn);
-            
-            // Prevent any default behavior
+            // console.log('=== BUTTON CLICKED DIRECTLY ===');
             e.preventDefault();
             e.stopPropagation();
-            e.stopImmediatePropagation();
-            
-            // Call handler
             handleFormSubmit(e);
-            
-            return false;
-        }, true); // Use capture phase
-        
-        // IMMEDIATE LOG - Always confirm listener attached
-        console.log('✅ Button click listener attached to:', submitBtn.id);
-        debugLog('✅ Button click listener attached');
-        
-        // Also try mousedown as another fallback
-        submitBtn.addEventListener('mousedown', function(e) {
-            // IMMEDIATE LOG - Always show mousedown
-            console.log('🔵 Button mousedown event detected');
-            debugLog('🔵 Button mousedown event');
         }, false);
-        
-        // IMMEDIATE LOG - Always confirm all listeners attached
-        console.log('✅✅✅ ALL EVENT LISTENERS ATTACHED ✅✅✅');
-        debugLog('=== ALL EVENT LISTENERS ATTACHED ===');
+        // console.log('Button click listener attached');
     }
 
     // Initialize form handler when DOM is ready
-    console.log('📋 Setting up form handler initialization...');
-    console.log('Document ready state:', document.readyState);
-    
-    // Add a global test function to check button from console
-    window.testSignupButton = function() {
-        const btn = document.getElementById('signupSubmit');
-        const form = document.getElementById('signupForm');
-        console.log('🧪 TEST: Button exists:', !!btn);
-        console.log('🧪 TEST: Form exists:', !!form);
-        if (btn) {
-            console.log('🧪 TEST: Button disabled:', btn.disabled);
-            console.log('🧪 TEST: Button type:', btn.type);
-            console.log('🧪 TEST: Button text:', btn.textContent);
-            console.log('🧪 TEST: Button onclick:', btn.onclick);
-            console.log('🧪 TEST: Button has event listeners:', btn.onclick !== null);
-        }
-        return { button: btn, form: form };
-    };
-    console.log('💡 Tip: Run testSignupButton() in console to check button status');
-    
     if (document.readyState === 'loading') {
-        console.log('⏳ Document still loading, waiting for DOMContentLoaded...');
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('✅ DOMContentLoaded fired, initializing form handler...');
-            initFormHandler();
-        });
+        document.addEventListener('DOMContentLoaded', initFormHandler);
     } else {
-        console.log('✅ Document already ready, initializing form handler immediately...');
         initFormHandler();
     }
-    
-    // Also try to attach a listener immediately if button exists (for dynamically loaded modals)
-    setTimeout(function() {
-        const testBtn = document.getElementById('signupSubmit');
-        if (testBtn) {
-            console.log('🔍 Found button after timeout, ensuring click handler...');
-            // Don't duplicate, but log that we found it
-            console.log('Button found at:', new Date().toISOString());
-        } else {
-            console.warn('⚠️ Button still not found after timeout');
-        }
-    }, 2000);
 
     // Clear errors on input - wait for form to exist
     function initInputHandlers() {
