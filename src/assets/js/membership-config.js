@@ -14,7 +14,7 @@ export const PRODUCT_CONFIG = {
 export const DEALER_ID = 7;
 
 // Campaign name
-export const CAMPAIGN_NAME = 'joinassure';
+export const CAMPAIGN_NAME = 'joinassureusa';
 
 /**
  * Get RRP for a product ID

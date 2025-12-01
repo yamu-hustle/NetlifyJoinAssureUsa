@@ -171,7 +171,9 @@
     let getRRP, DEALER_ID, CAMPAIGN_NAME;
     
     try {
-        configModule = await import('../assets/js/membership-config.js');
+        // Use absolute path from src root - works in both dev and production
+        // Vite root is './src', so /assets/js/ resolves to src/assets/js/
+        configModule = await import('/assets/js/membership-config.js');
         // Keep reference to the module to ensure closures work correctly
         window.__membershipConfig = configModule;
         
@@ -209,10 +211,10 @@
         console.error('Error message:', importError.message);
         console.error('Error stack:', importError.stack);
         
-        // Try alternative path as fallback
+        // Try relative path as fallback (for edge cases)
         try {
             console.log('🔄 Trying alternative import path...');
-            const configModule = await import('/assets/js/membership-config.js');
+            const configModule = await import('../assets/js/membership-config.js');
             getRRP = configModule.getRRP;
             DEALER_ID = configModule.DEALER_ID;
             CAMPAIGN_NAME = configModule.CAMPAIGN_NAME;
@@ -222,10 +224,10 @@
             // Set defaults to prevent complete failure
             // Use hardcoded values as last resort
             const FALLBACK_CONFIG = {
-                32: 529,  // Assure Platinum Annual
-                33: 49,   // Assure Platinum Monthly
-                34: 378,  // Assure Gold Annual
-                35: 35,   // Assure Gold Monthly
+                32: 476,  // Assure Platinum Annual
+                33: 44,   // Assure Platinum Monthly
+                34: 367,  // Assure Gold Annual
+                35: 34,   // Assure Gold Monthly
             };
             getRRP = (productId) => FALLBACK_CONFIG[productId] || null;
             DEALER_ID = 7;
