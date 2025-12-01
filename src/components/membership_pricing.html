@@ -170,70 +170,84 @@
     let configModule = null;
     let getRRP, DEALER_ID, CAMPAIGN_NAME;
     
-    try {
-        // Use absolute path from src root - works in both dev and production
-        // Vite root is './src', so /assets/js/ resolves to src/assets/js/
-        configModule = await import('/assets/js/membership-config.js');
-        // Keep reference to the module to ensure closures work correctly
-        window.__membershipConfig = configModule;
-        
-        // Always use module reference directly to avoid closure issues
-        // Create a wrapper that always calls through the module
-        getRRP = (productId) => {
-            return configModule.getRRP(productId);
-        };
-        
-        DEALER_ID = configModule.DEALER_ID;
-        CAMPAIGN_NAME = configModule.CAMPAIGN_NAME;
-        
-        console.log('✅ Imports loaded successfully via dynamic import');
-        console.log('DEALER_ID:', DEALER_ID);
-        console.log('CAMPAIGN_NAME:', CAMPAIGN_NAME);
-        console.log('getRRP type:', typeof getRRP);
-        console.log('PRODUCT_CONFIG available:', !!configModule.PRODUCT_CONFIG);
-        
-        if (configModule.PRODUCT_CONFIG) {
-            console.log('PRODUCT_CONFIG contents:', configModule.PRODUCT_CONFIG);
-            console.log('PRODUCT_CONFIG[32]:', configModule.PRODUCT_CONFIG[32]);
-            console.log('PRODUCT_CONFIG keys:', Object.keys(configModule.PRODUCT_CONFIG));
-            // Test the function
-            const testResult = getRRP(32);
-            console.log('Test getRRP(32):', testResult);
-            if (testResult !== 529) {
-                console.error('❌ getRRP test failed! Expected 529, got:', testResult);
-            } else {
-                console.log('✅ getRRP test passed!');
-            }
-        }
-    } catch (importError) {
-        console.error('❌ CRITICAL: Failed to import membership-config.js');
-        console.error('Import error:', importError);
-        console.error('Error message:', importError.message);
-        console.error('Error stack:', importError.stack);
-        
-        // Try relative path as fallback (for edge cases)
+    // Try multiple import paths to ensure we can load the config
+    const importPaths = [
+        '/assets/js/membership-config.js',  // Absolute from src root
+        '../assets/js/membership-config.js', // Relative from component
+        './assets/js/membership-config.js',  // Alternative relative
+        'assets/js/membership-config.js'     // Without leading slash
+    ];
+    
+    let importSucceeded = false;
+    let lastError = null;
+    
+    for (const importPath of importPaths) {
         try {
-            console.log('🔄 Trying alternative import path...');
-            const configModule = await import('../assets/js/membership-config.js');
-            getRRP = configModule.getRRP;
+            console.log(`🔄 Attempting to import from: ${importPath}`);
+            configModule = await import(importPath);
+            
+            // Verify the module has the expected exports
+            if (!configModule || typeof configModule.getRRP !== 'function' || !configModule.DEALER_ID || !configModule.CAMPAIGN_NAME) {
+                throw new Error(`Module loaded but missing required exports. Available: ${Object.keys(configModule).join(', ')}`);
+            }
+            
+            // Keep reference to the module to ensure closures work correctly
+            window.__membershipConfig = configModule;
+            
+            // Always use module reference directly to avoid closure issues
+            // Create a wrapper that always calls through the module
+            getRRP = (productId) => {
+                return configModule.getRRP(productId);
+            };
+            
             DEALER_ID = configModule.DEALER_ID;
             CAMPAIGN_NAME = configModule.CAMPAIGN_NAME;
-            console.log('✅ Imports loaded successfully via fallback path');
-        } catch (fallbackError) {
-            console.error('❌ Fallback import also failed:', fallbackError);
-            // Set defaults to prevent complete failure
-            // Use hardcoded values as last resort
-            const FALLBACK_CONFIG = {
-                32: 476,  // Assure Platinum Annual
-                33: 44,   // Assure Platinum Monthly
-                34: 367,  // Assure Gold Annual
-                35: 34,   // Assure Gold Monthly
-            };
-            getRRP = (productId) => FALLBACK_CONFIG[productId] || null;
-            DEALER_ID = 7;
-            CAMPAIGN_NAME = 'joinassure';
-            console.warn('⚠️ Using fallback hardcoded values - form will work but config import failed');
+            
+            console.log(`✅ Imports loaded successfully from: ${importPath}`);
+            
+            // Alert the successful path
+            alert(`✅ Config loaded successfully!\n\nPath: ${importPath}\n\nDEALER_ID: ${DEALER_ID}\nCAMPAIGN_NAME: ${CAMPAIGN_NAME}`);
+            
+            console.log('DEALER_ID:', DEALER_ID);
+            console.log('CAMPAIGN_NAME:', CAMPAIGN_NAME);
+            console.log('getRRP type:', typeof getRRP);
+            console.log('PRODUCT_CONFIG available:', !!configModule.PRODUCT_CONFIG);
+            
+            if (configModule.PRODUCT_CONFIG) {
+                console.log('PRODUCT_CONFIG contents:', configModule.PRODUCT_CONFIG);
+                console.log('PRODUCT_CONFIG[32]:', configModule.PRODUCT_CONFIG[32]);
+                console.log('PRODUCT_CONFIG keys:', Object.keys(configModule.PRODUCT_CONFIG));
+                // Test the function
+                const testResult = getRRP(32);
+                console.log('Test getRRP(32):', testResult);
+                const expectedValue = configModule.PRODUCT_CONFIG[32];
+                if (testResult !== expectedValue) {
+                    console.error(`❌ getRRP test failed! Expected ${expectedValue}, got:`, testResult);
+                } else {
+                    console.log('✅ getRRP test passed!');
+                }
+            }
+            
+            importSucceeded = true;
+            break; // Success, exit the loop
+        } catch (error) {
+            console.warn(`⚠️ Failed to import from ${importPath}:`, error.message);
+            lastError = error;
+            // Continue to next path
         }
+    }
+    
+    if (!importSucceeded) {
+        console.error('❌ CRITICAL: All import paths failed!');
+        console.error('Last error:', lastError);
+        console.error('Error message:', lastError?.message);
+        console.error('Error stack:', lastError?.stack);
+        
+        // DO NOT use fallback - throw error to force fix
+        const errorMsg = 'CRITICAL: Cannot load membership-config.js. All import paths failed. Please check file exists and paths are correct.';
+        console.error(errorMsg);
+        alert(errorMsg + '\n\nCheck console for details.');
+        throw new Error(errorMsg);
     }
     
     // ============================================
