@@ -26,81 +26,8 @@
         <h2 class="text-8xl lg:text-10xl mb-4 font-bold capitalize text-center tracking-tighter">Book, repair, drive.</h2>
     </div>
 
-    <!-- Assure Platinum Section -->
-    <div class="membership-card mb-8 md:mb-12">
-        <div class="flex flex-col lg:flex-row gap-6 lg:gap-8" style="align-items: center;">
-            <!-- Left Side - Title and Description -->
-            <div class="lg:w-1/2">
-                <h3 class="text-5xl lg:text-8xl font-bold text-blue mb-4">Assure Platinum $0 repair fee*</h3>
-                <p class="flex items-start text-base lg:text-lg text-black mb-0">
-                    <icon src="check-blue.svg" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></icon>
-                    All the good things included with gold minus the $50 call out fee*
-                </p>
-            </div>
-            
-            <!-- Right Side - Pricing Cards -->
-            <div class="lg:w-1/2 flex flex-col gap-4">
-                <!-- Annual Membership Card -->
-                <div class="bg-white rounded-xl p-6 shadow-lg">
-                    <p class="text-base lg:text-lg mb-3 font-semibold">Annual Membership</p>
-                    <div class="flex items-baseline gap-2 mb-2">
-                        <span class="text-5xl lg:text-6xl font-bold text-blue">$529</span>
-                        <span class="text-lg text-gray-400 line-through">$588</span>
-                    </div>
-                    <p class="text-sm lg:text-base text-green-600 font-semibold mb-2">SAVE 10%</p>
-                    <p class="text-sm lg:text-base text-gray-600 mb-4">Equal to $44.08 p/m</p>
-                    <a data-productId="32" data-mm-target="signupModal" class="signup-button inline-block w-full text-center px-4 py-3 rounded-lg font-semibold text-white cursor-pointer">
-                        Sign-up
-                    </a>
-                </div>
-                
-                <!-- Pay Monthly Card -->
-                <div class="bg-white rounded-xl p-6 shadow-lg">
-                    <p class="text-base lg:text-lg mb-3 font-semibold">Pay Monthly – $45 p/m</p>
-                    <p class="text-sm lg:text-base text-gray-600 mb-4">12 Month minimum – $540 total.</p>
-                    <a data-productId="33" data-mm-target="signupModal" class="signup-button inline-block w-full text-center px-4 py-3 rounded-lg font-semibold text-white cursor-pointer">
-                        Sign-up
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Assure Gold Section -->
-    <div class="membership-card mb-8 md:mb-12">
-        <div class="flex flex-col lg:flex-row gap-6 lg:gap-8" style="align-items: center;">
-            <!-- Left Side - Title -->
-            <div class="lg:w-1/2">
-                <h3 class="text-5xl lg:text-8xl font-bold text-blue mb-4">Assure Gold $50 repair fee*</h3>
-            </div>
-            
-            <!-- Right Side - Pricing Cards -->
-            <div class="lg:w-1/2 flex flex-col gap-4">
-                <!-- Annual Membership Card -->
-                <div class="bg-white rounded-xl p-6 shadow-lg">
-                    <p class="text-base lg:text-lg mb-3 font-semibold">Annual Membership</p>
-                    <div class="flex items-baseline gap-2 mb-2">
-                        <span class="text-5xl lg:text-6xl font-bold text-blue">$378</span>
-                        <span class="text-lg text-gray-400 line-through">$420</span>
-                    </div>
-                    <p class="text-sm lg:text-base text-green-600 font-semibold mb-2">SAVE 10%</p>
-                    <p class="text-sm lg:text-base text-gray-600 mb-4">Equal to $31.50 p/m</p>
-                    <a data-productId="34" data-mm-target="signupModal" class="signup-button inline-block w-full text-center px-4 py-3 rounded-lg font-semibold text-white cursor-pointer">
-                        Sign-up
-                    </a>
-                </div>
-                
-                <!-- Pay Monthly Card -->
-                <div class="bg-white rounded-xl p-6 shadow-lg">
-                    <p class="text-base lg:text-lg mb-3 font-semibold">Pay Monthly – $35 p/m</p>
-                    <p class="text-sm lg:text-base text-gray-600 mb-4">12 Month minimum – $420 total.</p>
-                    <a data-productId="35" data-mm-target="signupModal" class="signup-button inline-block w-full text-center px-4 py-3 rounded-lg font-semibold text-white cursor-pointer">
-                        Sign-up
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Membership Cards will be generated dynamically from config -->
+    <div id="membership-cards-container"></div>
 </div>
 
 <!-- Signup Modal -->
@@ -158,96 +85,192 @@
     </div>
 </div>
 
+<!-- Membership Config - Inline configuration -->
+<script>
+    // Configuration values - update here when prices change
+    // This ensures it's always available regardless of Vite bundling
+    window.MembershipConfig = {
+        // Product groups - each group contains annual and monthly products
+        PRODUCT_GROUPS: [
+            {
+                name: 'Platinum',
+                title: 'Assure Platinum $0 repair fee*',
+                description: 'All the good things included with gold minus the $50 call out fee*',
+                showDescription: true,
+                products: [
+                    {
+                        id: 32,
+                        name: 'Assure Platinum Annual',
+                        type: 'annual',
+                        price: 475,  // Discounted price (10% off from 528)
+                        monthlyPrice: 39.58,  // Price per month (475 / 12)
+                        originalPrice: 528  // Original price before discount
+                    },
+                    {
+                        id: 34,
+                        name: 'Assure Platinum Monthly',
+                        type: 'monthly',
+                        price: 44,  // Monthly price
+                        monthlyPrice: 44,
+                        totalAnnual: 528  // 12 months total (44 * 12)
+                    }
+                ]
+            },
+            {
+                name: 'Gold',
+                title: 'Assure Gold $50 repair fee*',
+                description: '',
+                showDescription: false,
+                products: [
+                    {
+                        id: 33,
+                        name: 'Assure Gold Annual',
+                        type: 'annual',
+                        price: 367,  // Discounted price (10% off from 408)
+                        monthlyPrice: 30.58,  // Price per month (367 / 12)
+                        originalPrice: 408  // Original price before discount
+                    },
+                    {
+                        id: 35,
+                        name: 'Assure Gold Monthly',
+                        type: 'monthly',
+                        price: 34,  // Monthly price
+                        monthlyPrice: 34,
+                        totalAnnual: 408  // 12 months total (34 * 12)
+                    }
+                ]
+            }
+        ],
+        DEALER_ID: 7,
+        CAMPAIGN_NAME: 'joinassureusa',
+        // Helper function to get RRP by product ID (for backward compatibility)
+        getRRP: function(productId) {
+            for (const group of this.PRODUCT_GROUPS) {
+                const product = group.products.find(p => p.id === productId);
+                if (product) {
+                    return product.price;
+                }
+            }
+            return null;
+        },
+        // Helper function to get product by ID
+        getProduct: function(productId) {
+            for (const group of this.PRODUCT_GROUPS) {
+                const product = group.products.find(p => p.id === productId);
+                if (product) {
+                    return { ...product, groupName: group.name };
+                }
+            }
+            return null;
+        }
+    };
+    
+    console.log('✅ Membership config loaded from inline script');
+    console.log('DEALER_ID:', window.MembershipConfig.DEALER_ID);
+    console.log('CAMPAIGN_NAME:', window.MembershipConfig.CAMPAIGN_NAME);
+    console.log('PRODUCT_GROUPS:', window.MembershipConfig.PRODUCT_GROUPS);
+</script>
+
 <script type="module">
     // IMMEDIATE LOG - Script is loading
     console.log('🚀 MEMBERSHIP PRICING SCRIPT LOADING...');
     console.log('Script location:', window.location.href);
     console.log('Current pathname:', window.location.pathname);
     
-    // Import path - use relative path from component
-    // In dev: resolves from src/components/ to src/assets/js/
-    // In production: Vite should process and resolve this during build
-    let configModule = null;
-    let getRRP, DEALER_ID, CAMPAIGN_NAME;
-    
-    // Try multiple import paths to ensure we can load the config
-    const importPaths = [
-        '/assets/js/membership-config.js',  // Absolute from src root
-        '../assets/js/membership-config.js', // Relative from component
-        './assets/js/membership-config.js',  // Alternative relative
-        'assets/js/membership-config.js'     // Without leading slash
-    ];
-    
-    let importSucceeded = false;
-    let lastError = null;
-    
-    for (const importPath of importPaths) {
-        try {
-            console.log(`🔄 Attempting to import from: ${importPath}`);
-            configModule = await import(importPath);
-            
-            // Verify the module has the expected exports
-            if (!configModule || typeof configModule.getRRP !== 'function' || !configModule.DEALER_ID || !configModule.CAMPAIGN_NAME) {
-                throw new Error(`Module loaded but missing required exports. Available: ${Object.keys(configModule).join(', ')}`);
-            }
-            
-            // Keep reference to the module to ensure closures work correctly
-            window.__membershipConfig = configModule;
-            
-            // Always use module reference directly to avoid closure issues
-            // Create a wrapper that always calls through the module
-            getRRP = (productId) => {
-                return configModule.getRRP(productId);
-            };
-            
-            DEALER_ID = configModule.DEALER_ID;
-            CAMPAIGN_NAME = configModule.CAMPAIGN_NAME;
-            
-            console.log(`✅ Imports loaded successfully from: ${importPath}`);
-            
-            // Alert the successful path
-            alert(`✅ Config loaded successfully!\n\nPath: ${importPath}\n\nDEALER_ID: ${DEALER_ID}\nCAMPAIGN_NAME: ${CAMPAIGN_NAME}`);
-            
-            console.log('DEALER_ID:', DEALER_ID);
-            console.log('CAMPAIGN_NAME:', CAMPAIGN_NAME);
-            console.log('getRRP type:', typeof getRRP);
-            console.log('PRODUCT_CONFIG available:', !!configModule.PRODUCT_CONFIG);
-            
-            if (configModule.PRODUCT_CONFIG) {
-                console.log('PRODUCT_CONFIG contents:', configModule.PRODUCT_CONFIG);
-                console.log('PRODUCT_CONFIG[32]:', configModule.PRODUCT_CONFIG[32]);
-                console.log('PRODUCT_CONFIG keys:', Object.keys(configModule.PRODUCT_CONFIG));
-                // Test the function
-                const testResult = getRRP(32);
-                console.log('Test getRRP(32):', testResult);
-                const expectedValue = configModule.PRODUCT_CONFIG[32];
-                if (testResult !== expectedValue) {
-                    console.error(`❌ getRRP test failed! Expected ${expectedValue}, got:`, testResult);
-                } else {
-                    console.log('✅ getRRP test passed!');
-                }
-            }
-            
-            importSucceeded = true;
-            break; // Success, exit the loop
-        } catch (error) {
-            console.warn(`⚠️ Failed to import from ${importPath}:`, error.message);
-            lastError = error;
-            // Continue to next path
-        }
+    // Get config from global window object (set by inline script above)
+    if (!window.MembershipConfig) {
+        const errorMsg = 'CRITICAL: MembershipConfig not found on window object. Config script may not have loaded.';
+        console.error(errorMsg);
+        alert(errorMsg);
+        throw new Error(errorMsg);
     }
     
-    if (!importSucceeded) {
-        console.error('❌ CRITICAL: All import paths failed!');
-        console.error('Last error:', lastError);
-        console.error('Error message:', lastError?.message);
-        console.error('Error stack:', lastError?.stack);
+    const config = window.MembershipConfig;
+    const getRRP = (productId) => config.getRRP(productId);
+    const DEALER_ID = config.DEALER_ID;
+    const CAMPAIGN_NAME = config.CAMPAIGN_NAME;
+    
+    console.log('✅ Config loaded from window.MembershipConfig');
+    console.log('DEALER_ID:', DEALER_ID);
+    console.log('CAMPAIGN_NAME:', CAMPAIGN_NAME);
+    console.log('PRODUCT_GROUPS:', config.PRODUCT_GROUPS);
+    
+    // Generate membership cards dynamically from config
+    function generateMembershipCards() {
+        const container = document.getElementById('membership-cards-container');
+        if (!container) {
+            console.error('Membership cards container not found');
+            return;
+        }
         
-        // DO NOT use fallback - throw error to force fix
-        const errorMsg = 'CRITICAL: Cannot load membership-config.js. All import paths failed. Please check file exists and paths are correct.';
-        console.error(errorMsg);
-        alert(errorMsg + '\n\nCheck console for details.');
-        throw new Error(errorMsg);
+        container.innerHTML = ''; // Clear existing content
+        
+        config.PRODUCT_GROUPS.forEach(group => {
+            // Find annual and monthly products
+            const annualProduct = group.products.find(p => p.type === 'annual');
+            const monthlyProduct = group.products.find(p => p.type === 'monthly');
+            
+            if (!annualProduct || !monthlyProduct) {
+                console.warn(`Missing products for group: ${group.name}`);
+                return;
+            }
+            
+            // Create membership card section
+            const cardSection = document.createElement('div');
+            cardSection.className = 'membership-card mb-8 md:mb-12';
+            
+            cardSection.innerHTML = `
+                <div class="flex flex-col lg:flex-row gap-6 lg:gap-8" style="align-items: center;">
+                    <!-- Left Side - Title and Description -->
+                    <div class="lg:w-1/2">
+                        <h3 class="text-5xl lg:text-8xl font-bold text-blue mb-4">${group.title}</h3>
+                        ${group.showDescription && group.description ? `
+                            <p class="flex items-start text-base lg:text-lg text-black mb-0">
+                                <icon src="check-blue.svg" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></icon>
+                                ${group.description}
+                            </p>
+                        ` : ''}
+                    </div>
+                    
+                    <!-- Right Side - Pricing Cards -->
+                    <div class="lg:w-1/2 flex flex-col gap-4">
+                        <!-- Annual Membership Card -->
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <p class="text-base lg:text-lg mb-3 font-semibold">Annual Membership</p>
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span class="text-5xl lg:text-6xl font-bold text-blue">$${annualProduct.price}</span>
+                                <span class="text-lg text-gray-400 line-through">$${annualProduct.originalPrice}</span>
+                            </div>
+                            <p class="text-sm lg:text-base text-green-600 font-semibold mb-2">SAVE 10%</p>
+                            <p class="text-sm lg:text-base text-gray-600 mb-4">Equal to $${annualProduct.monthlyPrice.toFixed(2)} p/m</p>
+                            <a data-productId="${annualProduct.id}" data-mm-target="signupModal" class="signup-button inline-block w-full text-center px-4 py-3 rounded-lg font-semibold text-white cursor-pointer">
+                                Sign-up
+                            </a>
+                        </div>
+                        
+                        <!-- Pay Monthly Card -->
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <p class="text-base lg:text-lg mb-3 font-semibold">Pay Monthly – $${monthlyProduct.price} p/m</p>
+                            <p class="text-sm lg:text-base text-gray-600 mb-4">12 Month minimum – $${monthlyProduct.totalAnnual} total.</p>
+                            <a data-productId="${monthlyProduct.id}" data-mm-target="signupModal" class="signup-button inline-block w-full text-center px-4 py-3 rounded-lg font-semibold text-white cursor-pointer">
+                                Sign-up
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(cardSection);
+        });
+        
+        console.log('✅ Membership cards generated from config');
+    }
+    
+    // Generate cards when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', generateMembershipCards);
+    } else {
+        generateMembershipCards();
     }
     
     // ============================================
