@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 	<head>
 		<include src="gtm_header.html"></include>
@@ -56,11 +56,11 @@
 	<body id="top" class="antialiased group/body">
 		<div class="overflow-hidden text-black wrapper">
 			<!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFDF2Z54"
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK8J58P8"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<!-- End Google Tag Manager (noscript) -->
 
-        <include src="section_header_with_phone.html" locals='{
+        <include src="section_header_with_email.html" locals='{
             "page": "offer"
         }'></include>
 
@@ -159,7 +159,7 @@
 						<div class="w-full md:w-8/12 lg:w-1/2">
 							<div class="text-center max-w-[458px] mx-auto">
 								<a
-									href="#offer-form"
+									href="#membership-pricing"
 									class="inline-block w-full border-0 rounded-full mb-3 text-[15px] lg:text-lg tracking-tight lg:tracking-wide font-bold bg-sky-500 px-3 py-4 lg:py-5 whitespace-normal cursor-pointer text-white transition duration-500 hover:no-underline hover:bg-sky-600 hover:text-white"
 								>
 									GET UNLIMITED SCRATCH & DENT REPAIRS
@@ -169,6 +169,21 @@
 									save on <strong>100+</strong> retailers
 								</p>
 							</div>
+						</div>
+					</div>
+					<!-- As Seen -->
+					<div
+						class="flex flex-col md:flex-row justify-center items-center gap-4 mt-8 md:mt-12"
+					>
+						<span class="text-[20px] md:text-[24px] font-semibold"
+							>As Seen In |</span
+						>
+						<div class="flex gap-4">
+							<img
+								src="as-seen-01.png"
+								alt="As Seen In"
+								class="h-[43px] md:h-[63px] w-auto"
+							/>
 						</div>
 					</div>
 				</div>
@@ -1581,7 +1596,7 @@
 							<div class="flex flex-wrap justify-center pt-10">
 								<div class="text-center max-w-[458px] mx-auto">
 									<a
-										href="#offer-form"
+										href="#membership-pricing"
 										class="inline-block w-full px-3 py-4 mb-3 font-bold tracking-tighter text-white whitespace-normal transition duration-500 border-0 rounded-full cursor-pointer lg:text-lg lg:tracking-wide bg-blue lg:py-5 hover:no-underline hover:bg-sky-600 hover:text-white"
 									>
 										PROTECT YOUR CAR WITH ASSURED NOW
@@ -1614,124 +1629,65 @@
 
 			<!-- marque -->
 			<section
-				class="relative z-20 pt-0 pb-16 overflow-hidden select-none md:pb-24 lg:pb-20"
+				class="relative z-20 pt-0 pb-16 select-none md:pb-24 lg:pb-20"
 			>
-				<div class="flex lg:text-xl">
-					<ul
-						class="flex items-center justify-around min-w-full p-0 my-1 animate-marqueereverse shrink-0"
+				<div
+					data-marquee
+					class="flex gap-[--marquee-gap] [--marquee-gap:20px] md:[--marquee-gap:32px]"
+				>
+					<div
+						data-marquee-items
+						class="flex gap-[--marquee-gap] animate-marquee"
 					>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-13.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-14.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-15.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-16.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-					</ul>
-					<ul
-						class="flex items-center justify-around min-w-full p-0 my-1 animate-marqueereverse shrink-0"
-					>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-13.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-14.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-15.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-16.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-					</ul>
-				</div>
+						<!-- Media Item -->
+						<div
+							class="border-[10px] border-white rounded-[2rem] aspect-[9/16] w-[228px] h-auto md:w-[320px] shadow-[0_13px_95px_0_rgba(0,39,56,0.08)] overflow-hidden"
+						>
+							<img src="marquee-01.jpg" alt="" />
+						</div>
+						<!-- Media Item -->
+						<div
+							class="border-[10px] border-white rounded-[2rem] aspect-[9/16] w-[228px] h-auto md:w-[320px] shadow-[0_13px_95px_0_rgba(0,39,56,0.08)] overflow-hidden"
+						>
+							<script
+								src="https://fast.wistia.com/player.js"
+								async
+							></script>
+							<script
+								src="https://fast.wistia.com/embed/akc6y8ax7n.js"
+								async
+								type="module"
+							></script>
+							<style>
+								wistia-player[media-id='akc6y8ax7n']:not(
+										:defined
+									) {
+									background: center / contain no-repeat
+										url('https://fast.wistia.com/embed/medias/akc6y8ax7n/swatch');
+									display: block;
+									filter: blur(5px);
+									padding-top: 56.25%;
+								}
+							</style>
+							<wistia-player
+								media-id="akc6y8ax7n"
+								aspect="0.5625"
+							></wistia-player>
+						</div>
+						<!-- Media Item -->
+						<div
+							class="border-[10px] border-white rounded-[2rem] aspect-[9/16] w-[228px] h-auto md:w-[320px] shadow-[0_13px_95px_0_rgba(0,39,56,0.08)] overflow-hidden"
+						>
+							<img src="marquee-02.jpg" alt="" />
+						</div>
 
-				<div class="flex lg:text-xl">
-					<ul
-						class="flex items-center justify-around min-w-full p-0 my-1 animate-marquee shrink-0"
-					>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-17.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-18.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-19.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-20.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-					</ul>
-					<ul
-						class="flex items-center justify-around min-w-full p-0 my-1 animate-marquee shrink-0"
-					>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-17.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-18.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-19.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-						<li class="flex px-1 py-1">
-							<img
-								src="after-before-20.png"
-								class="rounded-xl w-[326px] lg:w-[465px]"
-							/>
-						</li>
-					</ul>
+						<!-- Media Item -->
+						<div
+							class="border-[10px] border-white rounded-[2rem] aspect-[9/16] w-[228px] h-auto md:w-[320px] shadow-[0_13px_95px_0_rgba(0,39,56,0.08)] overflow-hidden"
+						>
+							<img src="marquee-03.jpg" alt="" />
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -2000,213 +1956,95 @@
 						</div>
 					</div>
 				</div>
-				<div class="swiper swiper-cutoff">
-					<div class="swiper-wrapper">
-						<div class="pb-5 swiper-slide lg:pb-7">
-							<div
-								class="flex-wrap justify-center mb-5 lg:flex lg:-mx-4"
-							>
-								<div
-									class="w-full px-2 mb-3 md:w-1/2 lg:w-5/12 md:mb-5"
-								>
-									<img
-										class="w-full rounded-3xl"
-										nolazy
-										src="after-before-11.png"
-									/>
-								</div>
-								<div
-									class="w-full p-5 mb-5 bg-white shadow-2xl md:w-1/2 lg:w-7/12 lg:p-10 lg:pl-36 rounded-3xl"
-								>
-									<blockquote
-										class="relative mb-0 text-medium md:text-lg pt-14 lg:pt-0"
-									>
-										<p class="mb-7">
-											<icon
-												class="absolute top-0 md:-left-14"
-												src="blue-quotes.svg"
-												width="46"
-											></icon>
-											I recently had my car's bumper
-											repaired, and I must say the results
-											were remarkable. It's as if the
-											damage never even happened.
-										</p>
-										<cite
-											class="flex items-center justify-between not-italic text-end"
-										>
-											<span
-												class="text-base md:text-[22px] font-semibold"
-												>Corey Holland</span
-											>
-											<span
-												class="text-[12px] md:text-medium flex items-center"
-												><icon
-													class="mr-2"
-													src="verified.svg"
-													width="14"
-												></icon>
-												Verified Review</span
-											>
-										</cite>
-									</blockquote>
-								</div>
-							</div>
-						</div>
-						<div class="pb-5 swiper-slide lg:pb-7">
-							<div
-								class="flex-wrap justify-center mb-5 lg:flex lg:-mx-4"
-							>
-								<div
-									class="w-full px-2 mb-3 md:w-1/2 lg:w-5/12 md:mb-5"
-								>
-									<img
-										class="w-full rounded-3xl"
-										nolazy
-										src="after-before-12.png"
-									/>
-								</div>
-								<div
-									class="w-full p-5 mb-5 bg-white shadow-2xl md:w-1/2 lg:w-7/12 lg:p-10 lg:pl-36 rounded-3xl"
-								>
-									<blockquote
-										class="relative mb-0 text-medium md:text-lg pt-14 lg:pt-0"
-									>
-										<p class="mb-7">
-											<icon
-												class="absolute top-0 md:-left-14"
-												src="blue-quotes.svg"
-												width="46"
-											></icon>
-											The repair work done on my car was
-											top-notch. I highly recommend their
-											services to anyone in need
-										</p>
-										<cite
-											class="flex items-center justify-between not-italic text-end"
-										>
-											<span
-												class="text-base md:text-[22px] font-semibold"
-												>John Saunders</span
-											>
-											<span
-												class="text-[12px] md:text-medium flex items-center"
-												><icon
-													class="mr-2"
-													src="verified.svg"
-													width="14"
-												></icon>
-												Verified Review</span
-											>
-										</cite>
-									</blockquote>
-								</div>
-							</div>
-						</div>
-						<div class="pb-5 swiper-slide lg:pb-7">
-							<div
-								class="flex-wrap justify-center mb-5 lg:flex lg:-mx-4"
-							>
-								<div
-									class="w-full px-2 mb-3 md:w-1/2 lg:w-5/12 md:mb-5"
-								>
-									<img
-										class="w-full rounded-3xl"
-										nolazy
-										src="after-before-new.png"
-									/>
-								</div>
-								<div
-									class="w-full p-5 mb-5 bg-white shadow-2xl md:w-1/2 lg:w-7/12 lg:p-10 lg:pl-36 rounded-3xl"
-								>
-									<blockquote
-										class="relative mb-0 text-medium md:text-lg pt-14 lg:pt-0"
-									>
-										<p class="mb-7">
-											<icon
-												class="absolute top-0 md:-left-14"
-												src="blue-quotes.svg"
-												width="46"
-											></icon>
-											The repair work performed on my
-											father's car was commendable. He is
-											delighted with the outcome. Keep up
-											the excellent work.
-										</p>
-										<cite
-											class="flex items-center justify-between not-italic text-end"
-										>
-											<span
-												class="text-base md:text-[22px] font-semibold"
-												>Wilburn Sherman</span
-											>
-											<span
-												class="text-[12px] md:text-medium flex items-center"
-												><icon
-													class="mr-2"
-													src="verified.svg"
-													width="14"
-												></icon>
-												Verified Review</span
-											>
-										</cite>
-									</blockquote>
-								</div>
-							</div>
-						</div>
-						<div class="pb-5 swiper-slide lg:pb-7">
-							<div
-								class="flex-wrap justify-center mb-5 lg:flex lg:-mx-4"
-							>
-								<div
-									class="w-full px-2 mb-3 md:w-1/2 lg:w-5/12 md:mb-5"
-								>
-									<img
-										class="w-full rounded-3xl"
-										nolazy
-										src="after-before-new-02.png"
-									/>
-								</div>
-								<div
-									class="w-full p-5 mb-5 bg-white shadow-2xl md:w-1/2 lg:w-7/12 lg:p-10 lg:pl-36 rounded-3xl"
-								>
-									<blockquote
-										class="relative mb-0 text-medium md:text-lg pt-14 lg:pt-0"
-									>
-										<p class="mb-7">
-											<icon
-												class="absolute top-0 md:-left-14"
-												src="blue-quotes.svg"
-												width="46"
-											></icon>
-											The repair was carried out
-											efficiently, resulting in an
-											impeccable outcome. Really great.
-										</p>
-										<cite
-											class="flex items-center justify-between not-italic text-end"
-										>
-											<span
-												class="text-base md:text-[22px] font-semibold"
-												>Victor Behler</span
-											>
-											<span
-												class="text-[12px] md:text-medium flex items-center"
-												><icon
-													class="mr-2"
-													src="verified.svg"
-													width="14"
-												></icon>
-												Verified Review</span
-											>
-										</cite>
-									</blockquote>
-								</div>
-							</div>
-						</div>
-					</div>
+				<!-- Testimonials -->
+				<div
+					class="container px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+				>
+					<include
+						src="testimonial.html"
+						locals='{
+						"avatar": "testimonial-01.png",
+						"name": "Greyde Cedeño",
+						"time": "a month ago",
+						"content": "I had a wonderful experience with this company. The technician was so punctual, and they provided a free estimate beforehand. The work was absolutely amazing - my car looks so good, it’s like new! I couldn’t be happier with the results and the great service."
+					}'
+					></include>
+					<include
+						src="testimonial.html"
+						locals='{
+						"avatar": "testimonial-09.png",
+						"name": "Ali Betancourt",
+						"time": "2 weeks ago",
+						"content": "This team is top-notch! They skillfully handled the damage (dents and scratches) on my car. The transformation is remarkable: the paint matches flawlessly, and the car has been restored to a brand-new appearance. I couldn’t be happier with their phenomenal and expert work."
+					}'
+					></include>
+					<include
+						src="testimonial.html"
+						locals='{
+						"avatar": "testimonial-02.png",
+						"name": "usoly jordan",
+						"time": "3 months ago",
+						"content": "We are absolutely thrilled with the results! The dent on the front left side of our vehicle was completely removed, making the car look pristine. We genuinely appreciate the top-notch work and pleasant service we received."
+					}'
+					></include>
+					<include
+						src="testimonial.html"
+						locals='{
+						"avatar": "testimonial-03.png",
+						"name": "Grace Kinya",
+						"time": "4 months ago",
+						"content": "They fixed my scuffed up bumper quickly. They did a fantastic job turning it into one cohesive bumper. The final product didn’t even look like it was ever patched up, blended the bumper colour flawlessly."
+					}'
+					></include>
+					<include
+						src="testimonial.html"
+						locals='{
+						"avatar": "testimonial-04.png",
+						"name": "Samuel Mulwa",
+						"time": "4 months ago",
+						"content": "This teamdoes amazing work. I contacted them not knowing what to expect. They had it taken care of in much less time than I anticipated and at a very reasonable price."
+					}'
+					></include>
+					<include
+						src="testimonial.html"
+						locals='{
+						"avatar": "testimonial-05.png",
+						"name": "Ruth Mumbi",
+						"time": "3 months ago",
+						"content": "They are very knowledgeable and experienced. Handled multiple dent repairs on my care with ease. Thanks."
+					}'
+					></include>
+					<include
+						src="testimonial.html"
+						locals='{
+						"class": "hidden md:block",
+						"avatar": "testimonial-06.png",
+						"name": "Jefferson Bermudez",
+						"time": "2 months ago",
+						"content": "The tech was courteous and professional. The work was completed on the same day and at a reasonable cost. Very pleased."
+					}'
+					></include>
+					<include
+						src="testimonial.html"
+						locals='{
+						"class": "hidden md:block",
+						"avatar": "testimonial-07.png",
+						"name": "Allan Njenga",
+						"time": "3 months ago",
+						"content": "These guys were all fantastic to chat with and went beyond what I expected. I am extremly happy with all the dents and scratches that where fixed."
+					}'
+					></include>
+					<include
+						src="testimonial.html"
+						locals='{
+						"class": "hidden md:block",
+						"avatar": "testimonial-08.png",
+						"name": "Jean Vargas",
+						"time": "2 Days ago",
+						"content": "Highly reliable and easy to work with! The staff provided excellent communication regarding their membership options, leaving no question unanswered. They then managed our vehicle repair quickly and in a timely fashion. Their professionalism and quality of work earned our total trust&#8212;even on a new car! We absolutely recommend them."
+					}'
+					></include>
 				</div>
-				<div class="flex justify-center mt-3 swiper-pagination"></div>
 			</section>
 
 			<!-- Last Section With Form -->
@@ -2307,99 +2145,8 @@
 								</li>
 							</ul>
 						</div>
-                    <div class="w-full mx-auto md:w-10/12 lg:w-8/12 lg:text-lg" id="offer-form">
-                        <div class="w-full mx-auto mb-20 md:w-10/12 lg:w-8/12 lg:text-lg">
-                            <!-- <form method="POST"  action="https://assurescratchanddent7190.activehosted.com/proc.php" netlify id="_form_1_" class="_form _form_1 _inline-form _dark kk-validation" novalidate data-styles-version="5"> -->
-                            <form method="POST" action="/thank-you/" id="_form_1_" class="_form _form_1 _inline-form _dark kk-validation" novalidate data-styles-version="5">
-									<!-- <input type="hidden" name="u" value="1" />
-						<input type="hidden" name="f" value="1" />
-						<input type="hidden" name="s" />
-						<input type="hidden" name="c" value="0" />
-						<input type="hidden" name="m" value="0" />
-						<input type="hidden" name="act" value="sub" />
-						<input type="hidden" name="v" value="2" />
-						<input type="hidden" name="or" value="e86aa341-dd2c-437a-b6af-18ef1c25e099" /> -->
-                                <input type="hidden" name="gclid" value="assureUsaHustleAds" />
-
-									<div class="form-content">
-                                    <div class="relative grid grid-cols-2 gap-2 mb-4 _form_element _x01862248 _full_width">
-											<div>
-                                            <label class="sr-only" for="firstname">First Name:</label>
-                                            <span class="absolute w-5 top-5 left-6">
-                                                <icon class="w-full" src="icon-profile.svg"></icon>
-												</span>
-                                            <input type="text" class="w-full h-16 text-black border-0 rounded-full placeholder:text-black bg-slate-50 text-medium lg:text-lg pl-14 autofill:bg-white autofill:bg-none autofill:text-black" id="firstname" name="firstname" placeholder="First Name" required />
-											</div>
-											<div>
-                                            <label class="sr-only" for="lastname">Last Name:</label>
-                                            <input type="text" class="w-full h-16 pl-8 text-black border-0 rounded-full placeholder:text-black bg-slate-50 text-medium lg:text-lg autofill:bg-white autofill:bg-none autofill:text-black" id="lastname" name="lastname" placeholder="Last Name" required />
-											</div>
-										</div>
-
-                                    <div class="relative mb-4 _form_element _x30569317 _full_width">
-                                        <label class="sr-only" for="email">Email Address:</label>
-                                        <span class="absolute w-5 top-5 left-6">
-                                            <icon class="w-full" src="icon-mail.svg"></icon>
-											</span>
-                                        <input type="email" class="w-full h-16 text-black border-0 rounded-full placeholder:text-black bg-slate-50 text-medium lg:text-lg pl-14 autofill:bg-white autofill:bg-none autofill:text-black" id="email" name="email" placeholder="Email*" required />
-										</div>
-
-                                    <div class="relative mb-4 _form_element _x61702404 _full_width">
-                                        <label class="sr-only" for="phone">Phone Number:</label>
-                                        <span class="absolute w-5 top-5 left-6">
-                                            <icon class="w-full" src="form-tel.svg"></icon>
-											</span>
-                                        <input type="tel" class="w-full h-16 text-black border-0 rounded-full placeholder:text-black bg-slate-50 text-medium lg:text-lg pl-14 autofill:bg-white autofill:bg-none autofill:text-black" id="phone" name="phone" placeholder="Phone*" required />
-										</div>
-
-                                    <div class="relative mb-4 _form_element _x61702404 _full_width">
-                                        <label class="sr-only" for="time">Preferred Time To Call:</label>
-                                        <span class="absolute w-5 top-5 left-6">
-                                            <icon class="w-full" src="icon-clock.svg"></icon>
-											</span>
-                                        <select class="w-full h-16 text-black border-0 rounded-full bg-slate-50 text-medium lg:text-lg pl-14 autofill:bg-white autofill:bg-none autofill:text-black" id="time" name="time" required>
-                                            <option value="" selected disabled>Preferred Time To Call</option>
-                                            <option value="Morning (8 AM to 12 PM)">Morning (8 AM to 12 PM)</option>
-                                            <option value="Afternoon (12 PM to 4 PM)">Afternoon (12 PM to 4 PM)</option>
-                                            <option value="Evening (4 PM to 6 PM)">Evening (4 PM to 6 PM)</option>
-											</select>
-										</div>
-
-                                    <div class="relative mb-4 _form_element _x32385389 _full_width">
-                                        <label class="sr-only" for="zipcode">Zip Code:</label>
-                                        <span class="absolute w-5 top-5 left-6">
-                                            <icon class="w-full" src="icon-location.svg"></icon>
-											</span>
-											<input type="text"
-												data-kk-regex="^9[0-6]\d{3}$" data-kk-message="Unfortunately we don't service this zip code yet."
-												class="w-full h-16 text-black border-0 rounded-full bg-slate-50 text-medium lg:text-lg pl-14 autofill:bg-white autofill:bg-none autofill:text-black"
-												id="zipcode"
-												name="zipcode"
-												placeholder="ZIP code*"
-												required
-											>
-										</div>
-
-                                    <div class="relative mb-4 _form_element _x26578257 _full_width">
-                                        <label class="sr-only" for="comment_or_question">Message:</label>
-                                        <span class="absolute w-5 top-4 left-5">
-                                            <icon class="w-full" src="icon-chat.svg"></icon>
-											</span>
-                                        <textarea class="w-full pt-3 text-black border-0 placeholder:text-black h-44 bg-slate-50 text-medium lg:text-lg pl-14 rounded-3xl autofill:bg-white autofill:bg-none autofill:text-black" id="comment_or_question" name="comment_or_question" placeholder="Any comments or questions for our team?"></textarea>
-										</div>
-
-										<div class="w-full mx-auto text-center xl:w-10/12 _button-wrapper _full_width">
-											<button type="submit" id="_form_1_submit" type="submit" class="_submit inline-block w-full border-0 rounded-full mb-3 text-[15px] lg:text-lg uppercase font-bold px-5 py-4 lg:py-5 lg:px-5 whitespace-normal tracking-tight cursor-pointer bg-blue text-white transition duration-500 hover:no-underline hover:bg-sky-600 hover:text-white"> PROTECT YOUR CAR WITH ASSURED NOW </button>
-											<p class="w-full text-sm lg:text-[15px] lg:px-4 leading-[1.25]" > Join Assured Now To Get Unlimited On-Site Scratch & Dent Repair For Just $35/pm – Plus, Extra Membership Bonuses To Keep Your Car In Showroom Condition! </p>
-										</div>
-										<div class="_clear-element"></div>
-									</div>
-                                <div class="_form-thank-you" style="display:none;"></div>
-
-                                <div class="form-messages mt-5  [&.error]:text-red-500 [&.success]:text-indigo-600 empty:hidden text-center" ></div>
-								</form>
-							</div>
-						</div>
+                    <!-- Membership Pricing Section -->
+                    <include src="membership_pricing.html"></include>
 					</div>
 				</div>
 			</section>
@@ -2488,7 +2235,7 @@
 												Depending on your plan there may
 												be a small $50 repair fee .
 												However , we offer plans that
-												don't have the repair fee. So,
+												don’t have the repair fee. So,
 												its up to you ! If you do go
 												ahead with the $50 repair fee
 												that is still a fraction of what
@@ -2646,13 +2393,7 @@
 			></include>
 		</div>
 
-		<!-- Lead Library Script -->
-		<script
-			type="text/javascript"
-			src="https://scripts.kingkong.net.au/tracker.min.js"
-		></script>
-
-
+	
     
 
 		<script>
@@ -2683,9 +2424,22 @@
     <!-- modified phone validation for 10 digits -->
     <script>
         window._kkValidatePhone = function() {
-            return /^(?:\+61\s?|0)[2-478](?:[ -]?[0-9]){8}$/.test(document.querySelector('form input[type="tel"]').value);
+            // Select the phone input field within the form
+            const phoneInput = document.querySelector('form input[type="tel"]')
+
+            // If the phone input field is not found, log an error and return false
+            if (!phoneInput) {
+                console.error('Phone input field not found!')
+                return false
+            }
+
+            // Remove all non-digit characters from the input value
+            const digitsOnly = phoneInput.value.replace(/\D/g, '')
+
+            // Check if there are exactly 10 digits
+            return digitsOnly.length === 10
         }
-		</script>
+	</script>
 
     <script src="https://fast.wistia.com/embed/medias/3y3pktf3wi.jsonp" async></script>
     <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
