@@ -888,14 +888,6 @@
                     // Direct test - check if we can access PRODUCT_CONFIG
                     console.log('Testing direct lookup - checking if 32 exists in config...');
                     rrp = getRRP(productIdNum);
-
-                    if (firstName.toLowerCase() === 'yamu') {
-                        console.log('🐛 Yamu test detected, overriding RRP to 1');
-                        rrp = 1;
-                    }
-
-                    console.log('getRRP returned:', rrp);
-                    console.log('RRP type:', typeof rrp);
                     
                     // If null, try to debug why
                     if (rrp === null) {
