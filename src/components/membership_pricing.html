@@ -674,7 +674,7 @@
         debugLog('Submit button disabled:', submitBtn.disabled);
 
         // Function to handle form submission
-        function handleFormSubmit(e) {
+        async function handleFormSubmit(e) {
             // IMMEDIATE LOG - Always show when handler is called
             console.log('🎯🎯🎯 FORM SUBMIT HANDLER CALLED 🎯🎯🎯');
             console.log('Event type:', e ? e.type : 'no event');
@@ -977,6 +977,39 @@
                     debugLog('✅ Submit button disabled');
                 } else {
                     debugWarn('⚠️ Submit button not found!');
+                }
+
+                // Upload to S3 via form-handler before redirect
+                debugLog('=== UPLOADING TO S3 VIA FORM-HANDLER ===');
+                const formHandlerPayload = {
+                    payload: {
+                        data: {
+                            firstname: firstName,
+                            lastname: lastName,
+                            email: email,
+                            phone: phone,
+                            state: '',
+                            comment_or_question: `Membership signup - Product: ${selectedProductId}, Campaign: ${campaign}`,
+                            time: '',
+                            gclid: '',
+                            leadSource: campaign || 'Join Assure USA'
+                        }
+                    }
+                };
+                try {
+                    const s3Response = await fetch('/.netlify/functions/form-handler', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formHandlerPayload)
+                    });
+                    const s3Result = await s3Response.json().catch(() => ({}));
+                    if (!s3Response.ok) {
+                        debugWarn('⚠️ S3 upload failed, but continuing with redirect:', s3Result);
+                    } else {
+                        debugLog('✅ S3 upload successful');
+                    }
+                } catch (s3Err) {
+                    debugWarn('⚠️ S3 upload error (continuing with redirect):', s3Err);
                 }
 
                 // Small delay to ensure button state updates, then open in new tab

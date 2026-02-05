@@ -1,3 +1,5 @@
+import { uploadSubmissionToS3 } from "./lib/s3-upload.js";
+
 export const handler = async (event) => {
     console.log("🚀 Function triggered with method:", event.httpMethod);
     console.log("📝 Event body:", event.body);
@@ -90,15 +92,24 @@ export const handler = async (event) => {
 
         console.log("🚀 Payload for Salesforce:", payload);
 
-        // Always call Salesforce API (debug mode removed)
+        // Upload to S3 for backup (runs in parallel; we will block success if it fails)
+        const submissionForS3 = {
+            receivedAt: new Date().toISOString(),
+            payload,
+            rawData: data,
+        };
+        const s3UploadPromise = uploadSubmissionToS3(submissionForS3);
 
         // Call Salesforce API with timeout
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
 
         try {
+            // Run S3 upload and Salesforce in parallel
             console.log("🌐 Calling Salesforce API...");
-            const response = await fetch("https://fun-site-4680.my.salesforce-sites.com/services/apexrest/CreateLeadAssure", {
+            const [s3Result, response] = await Promise.all([
+                s3UploadPromise,
+                fetch("https://fun-site-4680.my.salesforce-sites.com/services/apexrest/CreateLeadAssure", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -106,13 +117,33 @@ export const handler = async (event) => {
                 },
                 body: JSON.stringify(payload),
                 signal: controller.signal
-            });
+                })
+            ]);
 
             clearTimeout(timeoutId);
 
             const responseText = await response.text();
             console.log("📡 Salesforce response status:", response.status);
             console.log("📡 Salesforce response text:", responseText);
+
+            // If S3 is configured but upload fails, return a non-2xx so the frontend won't redirect.
+            if (s3Result?.status === "failed") {
+                console.error("🛑 Blocking success due to S3 upload failure:", s3Result);
+                return {
+                    statusCode: 502,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Headers': 'Content-Type'
+                    },
+                    body: JSON.stringify({
+                        message: "Submission received but S3 backup failed. Please try again.",
+                        error: "S3_UPLOAD_FAILED",
+                        s3: s3Result,
+                        timestamp: new Date().toISOString(),
+                    })
+                };
+            }
 
             let responseData;
             try {
@@ -136,6 +167,7 @@ export const handler = async (event) => {
                 body: JSON.stringify({
                     message: "Lead submitted successfully!",
                     response: responseData,
+                    s3: s3Result || { status: "unknown" },
                     timestamp: new Date().toISOString()
                 })
             };
