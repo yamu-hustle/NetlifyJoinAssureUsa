@@ -981,6 +981,10 @@
 
                 // Upload to S3 via form-handler before redirect
                 debugLog('=== UPLOADING TO S3 VIA FORM-HANDLER ===');
+                const pageParams = new URLSearchParams(window.location.search);
+                const gclidFromUrl = pageParams.get('gclid') || '';
+                const utmContentFromUrl = pageParams.get('utm_content') || '';
+                const leadSourceForSf = gclidFromUrl ? 'GoogleAds' : (campaign || 'Join Assure USA');
                 const formHandlerPayload = {
                     payload: {
                         data: {
@@ -991,8 +995,9 @@
                             state: '',
                             comment_or_question: `Membership signup - Product: ${selectedProductId}, Campaign: ${campaign}`,
                             time: '',
-                            gclid: '',
-                            leadSource: campaign || 'Join Assure USA'
+                            gclid: gclidFromUrl,
+                            utm_content: utmContentFromUrl,
+                            leadSource: leadSourceForSf
                         }
                     }
                 };
