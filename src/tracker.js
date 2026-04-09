@@ -33,8 +33,8 @@
     }
 
     function getGclid() {
-        const input = document.querySelector('input[name="gclid"]')
-        return input && input.value ? input.value : ''
+        const v = new URLSearchParams(window.location.search).get('gclid')
+        return v != null && String(v).trim() !== '' ? String(v).trim() : ''
     }
 
     function validateEmail(value) {

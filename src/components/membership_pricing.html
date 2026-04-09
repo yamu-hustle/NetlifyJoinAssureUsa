@@ -74,6 +74,28 @@
                             <span class="error-message text-red-500 text-sm hidden"></span>
                         </div>
 
+                        <div class="mb-4">
+                            <label class="flex items-start gap-2 cursor-pointer text-left">
+                                <input type="checkbox" id="sms_consent" name="sms_consent" value="yes" required class="mt-1 w-4 h-4 shrink-0 accent-blue-600 cursor-pointer" />
+                                <span class="text-sm text-gray-700">I agree to receive recurring automated text messages at the phone number provided. 4–8 msgs/mo. Msg &amp; data rates may apply. Reply HELP for help and STOP to end. View our <a id="sms_tos_link" href="#" target="_blank" rel="noopener" class="text-blue underline">Terms of Service</a> and <a id="sms_pp_link" href="#" target="_blank" rel="noopener" class="text-blue underline">Privacy Policy</a>.</span>
+                            </label>
+                        </div>
+                        <script>
+                            (function() {
+                                var host = window.location.hostname;
+                                var assureDomain = 'assurescratchanddent.com';
+                                if (host.endsWith('.com.au')) assureDomain = 'assurescratchanddent.com.au';
+                                else if (host.endsWith('.in')) assureDomain = 'assurescratchanddent.in';
+                                else if (host.endsWith('.co.nz')) assureDomain = 'assurescratchanddent.co.nz';
+                                var SMS_TERMS_URL = 'https://' + assureDomain + '/terms-and-conditions';
+                                var SMS_PRIVACY_URL = 'https://' + assureDomain + '/privacy-policy';
+                                var tosLink = document.getElementById('sms_tos_link');
+                                var ppLink = document.getElementById('sms_pp_link');
+                                if (tosLink) tosLink.href = SMS_TERMS_URL;
+                                if (ppLink) ppLink.href = SMS_PRIVACY_URL;
+                            })();
+                        </script>
+
                         <button type="button" id="signupSubmit" class="signup-button w-full text-center px-4 py-3 rounded-lg font-semibold text-white transition duration-300">
                             Continue
                         </button>
